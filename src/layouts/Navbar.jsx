@@ -1,9 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import NavbarButton from '../components/ui/NavbarButton';
 
 const Navbar = () => {
-
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
     <nav className='bg-spaceCadet px-40 py-12'>
@@ -11,30 +13,47 @@ const Navbar = () => {
 
         <div className='flex space-x-2'>
           <img src="./logo.png" alt="Radiant's logo" className='h-20' />
-          <Link to='/'>
           <div className='flex flex-col'>
             <span className="text-5xl font-bold text-azure tracking-wide">Radiant</span>
             <span className='text-3xl font-medium text-white'>Dental Studio</span>
           </div>
-          </Link>
         </div>
 
         <div className='flex'>
           <ul className='flex justify-evenly text-2xl text-spanishBlue '>
-            <li className='p-4 hover:underline'><Link to='/services'>Services</Link></li>
-            <li className='p-4 hover:underline'><Link to='/about'>About Us</Link></li>
-            <li className='p-4 hover:underline'><Link to='/team'>Our Team</Link></li>
-            <li className='p-4 hover:underline'><Link to='/reviews'>Testimonials</Link></li>
-            <li className='p-4 hover:underline'><Link to='/contact'>Contact us</Link></li>
-            
+            <li className='p-4 hover:underline'>
+              <ScrollLink to='services' smooth={true} duration={500}>
+                Services
+              </ScrollLink>
+            </li>
+            <li className='p-4 hover:underline'>
+              <ScrollLink to='about' smooth={true} duration={500}>
+                About Us
+              </ScrollLink>
+            </li>
+            <li className='p-4 hover:underline'>
+              <ScrollLink to='team' smooth={true} duration={500}>
+                Our Team
+              </ScrollLink>
+            </li>
+            <li className='p-4 hover:underline'>
+              <ScrollLink to='reviews' smooth={true} duration={500}>
+                Testimonials
+              </ScrollLink>
+            </li>
+            <li className='p-4 hover:underline'>
+              <ScrollLink to='contact' smooth={true} duration={500}>
+                Contact us
+              </ScrollLink>
+            </li>
           </ul>        
-          <NavbarButton>
+          <NavbarButton onClick={scrollToTop}>
             book online
           </NavbarButton>
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

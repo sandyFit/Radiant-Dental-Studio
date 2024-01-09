@@ -4,7 +4,7 @@ import ServiceCard from '../../components/cards/ServiceCard'
 const Services = () => {
   return (
     <div className='bg-white flex flex-col justify-center items-center min-h-screen space-y-12'>
-      <div className='flex flex-col w-10/12 justify-center space-y-8'>
+      <div className='flex flex-col w-4/5 justify-center space-y-8'>
         <h2 className='text-center text-spaceCadet text-6xl font-bold'>
           Welcome to
           <span className='text-azure' style={{ margin: ' 0 1rem' }}>
@@ -29,17 +29,17 @@ const Services = () => {
         <ServiceCard
           iconSrc="/icons/teeth.png"
           title="Hygiene and Therapy"
-          description="Ensure lifelong dental health with treatments for function, aesthetics, and prevention."
+          description="Our preventive treatments safeguard against disease, promoting a consistently radiant smile."
         />
         <ServiceCard
           iconSrc="/icons/braces.png"
           title="Orthodontics"
-          description="Ensure lifelong dental health with treatments for function, aesthetics, and prevention."
+          description="Enhance your smile with premium treatments for beautifully aligned teeth."
         />
         <ServiceCard
           iconSrc="/icons/dental-implant.png"
           title="Cosmetic Dentistry"
-          description="Ensure lifelong dental health with treatments for function, aesthetics, and prevention."
+          description=" Tailored treatments for a beautiful, confident grin you'll proudly showcase every day."
         />
       </div>
     </div>

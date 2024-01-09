@@ -12,7 +12,7 @@ export default {
         spaceCadet: '#1D345D', // Petroleum blue
         azure: '#0084FF', // vibrant blue
         spanishBlue: '#53B4DE', // jade blue
-        oceanBlue: '#F0F6FF', 
+        oceanBlue: '#DCEAFF', 
         whiteBlue: '#E3EDFC', // white blueish
         fairBlue: '#CDDFFA',
         lightBlue: '#6B8ECD', // light blue
@@ -25,7 +25,9 @@ export default {
   
       fontFamily: {
         sans: ['Quicksand', 'sans-serif'],
-      }
+      },
+
+      
     },
   },
   plugins: [],
