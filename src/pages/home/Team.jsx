@@ -3,9 +3,10 @@ import TeamCards from '../../components/cards/TeamCards'
 
 const Team = () => {
     return (
-      <div className='relative z-10 flex justify-start pl-48 pt-16 bg-white2 h-screen'>
-        <div className='bg-fairBlue w-[75rem] h-[44rem] rounded-[50px] relative'>
-          <div className='flex flex-wrap w-[55rem] relative left-24 top-[6rem] '>           
+      <div className='relative z-1 flex justify-start pl-48 pt-16 bg-spaceCadet bg-opacity-[.60] h-[70rem]'>
+
+        <div className='bg-fairBlue w-[75rem] h-[44rem] rounded-[50px] relative z-10 mt-32'>
+          <div className='flex flex-wrap w-[55rem] relative left-24 top-[5.5rem] z-10'>           
             <TeamCards
               imgSrc='/images/doc8.jpeg'
               name='Judy Woods'
@@ -38,7 +39,7 @@ const Team = () => {
             />
           </div>
           <div className='bg-spaceCadet w-[35rem] h-[42rem] absolute right-[-20rem] bottom-[-5rem] rounded-[38px]
-            flex flex-col justify-center items-center px-14 space-y-8 shadow-2xl shadow-midnight'
+            flex flex-col justify-center items-center px-14 space-y-8 shadow-xl shadow-midnight'
           >
             <h2 className='text-center text-white2 text-5xl font-bold'>
               Our
@@ -62,6 +63,7 @@ const Team = () => {
             </div>
 
         </div>
+
       </div>
     )
 }

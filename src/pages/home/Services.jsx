@@ -5,12 +5,11 @@ const Services = () => {
   return (
     <div className='bg-white flex flex-col justify-center items-center min-h-screen space-y-12'>
       <div className='flex flex-col w-4/5 justify-center space-y-8'>
-        <h2 className='text-center text-spaceCadet text-6xl font-bold'>
-          Welcome to
+        <h2 className='text-center text-spaceCadet text-5xl font-bold'>
+          Discover Our Exceptional  
           <span className='text-azure' style={{ margin: ' 0 1rem' }}>
-            Radiant 
+            Dental Services
           </span>         
-          Dental Studio
         </h2>
 
         <p className='text-lightBlue text-2xl font-semibold'>
