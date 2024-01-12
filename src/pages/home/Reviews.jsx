@@ -16,7 +16,7 @@ const Reviews = () => {
       </div> 
 
       <div className='mt-16'>
-        <Carousel reviews={reviewsData} autoSlide={true} autoSlideInterval={5000} />
+        <Carousel reviews={reviewsData} autoSlide={true} autoSlideInterval={12000} />
       </div>
     </div>
      
