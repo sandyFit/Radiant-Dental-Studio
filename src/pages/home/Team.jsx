@@ -42,7 +42,7 @@ const Team = () => {
             flex flex-col justify-center items-center px-14 space-y-8 shadow-xl shadow-midnight'
           >
             <h2 className='text-center text-white2 text-5xl font-bold'>
-              Our
+              Meet the
               <span className='text-azure' style={{ margin: ' 0 1rem' }}>
                 Team
               </span>         
