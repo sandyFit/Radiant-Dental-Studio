@@ -5,8 +5,12 @@ const Hero = () => {
 
 
   return (
-    <div className='bg-spaceCadet flex justify-around min-h-screen'
+    <div className='bg-spaceCadet flex justify-around min-h-screen relative'
       style={{ minHeight: `calc(100vh - 180px)` }}>
+      
+      <div className="absolute top-20 left-[12rem] w-[28rem] h-[28rem] rounded-full mix-blend-multiply filter blur-2xl 
+          opacity-45 bg-gradient-to-r from-oceanBlue to-azure">
+        </div>
       <div className='flex flex-col w-1/3 space-y-12 pt-[12rem] pl-12'>
         <h1 className='text-white text-8xl font-bold w-full max-w-12'>
           <span >

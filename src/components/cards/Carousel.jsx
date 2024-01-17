@@ -35,10 +35,10 @@ const Carousel = ({
             </div>
             
             <div className='relative text-spanishBlue'>                
-                <button className='absolute bottom-[12rem] left-[-8rem] transform -translate-y-1/2' onClick={prevSlide}>
+                <button className='absolute bottom-[8rem] left-[-8rem] transform -translate-y-1/2' onClick={prevSlide}>
                     <ChevronLeftRounded style={{fontSize: '6rem'}}/>
                 </button>
-                <button className='absolute bottom-[12rem] right-[-8rem] transform -translate-y-1/2' onClick={nextSlide}>
+                <button className='absolute bottom-[8rem] right-[-8rem] transform -translate-y-1/2' onClick={nextSlide}>
                     <ChevronRightRounded style={{fontSize: '6rem'}}/>
                 </button>
             </div>

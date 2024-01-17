@@ -3,7 +3,7 @@ import Hero from './Hero'
 import Services from './Services'
 import About from './About'
 import Team from './Team'
-import Contact from './Contact'
+import Faq from './Faq'
 import Reviews from './Reviews'
 
 
@@ -25,9 +25,9 @@ const Home = () => {
         <section id='reviews'>
           <Reviews/>
         </section>
-        {/* <section id='contact'>
-          <Contact/>
-        </section> */}
+        <section id='Faq'>
+          <Faq/>
+        </section>
       </div>
     )
 } 

@@ -1,24 +1,42 @@
 import StarIcon from '@mui/icons-material/Star';
 
-const ReviewsCard = ({name, review}) => {
+const ReviewsCard = ({name, srcImg, review}) => {
     return (
-        <div className='bg-oceanBlue hover:bg-transparent w-[65rem] h-[30rem] flex flex-col justify-start 
-        py-16 px-10 mt-5 rounded-[35px] shadow-xl shadow-spanishBlue space-y-6 cursor-pointer relative'>
-            <h4 className='text-midnight text-3xl font-bold'>
-                {name}
-            </h4>
+        <div className='bg-spaceCadet w-[78rem] h-auto border-8 border-spanishBlue flex flex-col justify-start 
+         p-16 mt-5 space-y-4 cursor-pointer relative'>
 
-            <p className='text-azure text-[1.5rem]'>
+            <div className='space-x-2'>
+                    <span className='bg-spaceCadet px-4 text-spanishBlue font-bold absolute top-[-1.5rem]
+                        left-8'>
+                    {[...Array(5)].map((_, index) => (
+                        <StarIcon key={index} style={{ fontSize: '2.8rem' }} />
+                    ))}
+                    </span>
+                </div>
+
+            
+
+            <div className="flex justify-start items-center space-x-4">
+                <div >
+                    <img src={srcImg}
+                        alt={`${name} avatar`}
+                        className='border-4 border-spanishBlue rounded-full'
+                    />
+                </div>
+
+                <h4 className='text-spanishBlue text-4xl font-bold '>
+                    {name}
+                </h4>
+                
+            </div>
+
+
+            <p className='text-white3 text-[1.5rem] pb-6'>
                 {review}
             </p>
 
-            <div className='absolute left-10 bottom-[6rem] space-x-2 mt-auto'>
-                <span className='text-gold'>
-                {[...Array(5)].map((_, index) => (
-                    <StarIcon key={index} style={{ fontSize: '2rem' }} />
-                ))}
-                </span>
-            </div>
+
+            
         </div>
 
     )

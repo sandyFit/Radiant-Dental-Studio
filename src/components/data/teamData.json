@@ -10,14 +10,14 @@
         "id": 2,
         "firstName": "Nathan",
         "lastName": "Roberts",
-        "bio": ["Dr. Roberts attended the University of Pittsburgh, he enrolled in a seven-year accelerated program that earned him both a Bachelor of Science in general chemistry and biology and a Doctorate of Medicine in Dentistry (DMD).", "Dr. Roberts's expertise ranges from general exams and preventive care to more complex cosmetic procedures such as dental implants, veneers, and Invisalign®. He works closely with her patients to develop individualized plans that address their goals, health considerations, and budgets."]
+        "bio": ["Dr. Roberts is the foundeer and owner of Radiant Dental Studio. He attended the University of Pittsburgh, he enrolled in a seven-year accelerated program that earned him both a Bachelor of Science in general chemistry and biology and a Doctorate of Medicine in Dentistry (DMD).", "Dr. Roberts's expertise ranges from general exams and preventive care to more complex cosmetic procedures such as dental implants, veneers, and Invisalign®. ", "He works closely with her patients to develop individualized plans that address their goals, health considerations, and budgets."]
     },
 
     {
         "id": 3,
         "firstName": "Joseph",
         "lastName": "Gale",
-        "bio": ["Joseph graduated from the Dental Hygiene Program at Hudson Valley Community College in 2010. He attends numerous continuing education courses to keep up with the latest methods, materials and emerging technologies. He has been certified in the use of nitrous oxide and local anesthesia.", "Joseph also has an interest in studying the links between gum disease and overall systemic health. He has been a welcomed asset to our practice since 2016."]
+        "bio": ["Joseph undertook the combined roles of Dental Therapist and Hygienist at Hudson Valley Community College in 2010, and has been a welcomed asset to our practice since 2016.", "His training means he can carry out some of the work of a dentist, including providing treatments to children and treating patients suffering from gum disease. He has been certified in the use of nitrous oxide and local anesthesia.", "Joseph aims to provide the highest standard of dental care and keeps his knowledge up to date by attending dental courses and lectures."] 
     },
 
     {
@@ -45,6 +45,6 @@
         "id": 7,
         "firstName": "Daniela",
         "lastName": "Alvarado",
-        "bio": ["Daniela joined our team in 2016. Behind her beautiful smile is a woman who is passionate about getting to know all of our patients and making sure they receive quality service and attention from our front office.", "Daniela was born in Colombia her parents migrated when she was 3 and has lived in the South Bay most of her life.", "Outside of the office, being involved in the community is very important to Daniela. She's an avid volunteer for various local projects. Daniela is also fluent in Spanish."]
+        "bio": ["Daniela joined our team in 2016. Behind her beautiful smile is a woman who is passionate about getting to know all of our patients and making sure they receive quality service and attention from our front office.", "Daniela was born in Colombia, her parents migrated when she was 3 and has lived in the South Bay most of her life.", "Outside of the office, being involved in the community is very important to Daniela. She's an avid volunteer for various local projects. Daniela is also fluent in Spanish."]
     }
 ]
