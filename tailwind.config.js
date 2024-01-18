@@ -28,6 +28,7 @@ export default {
   
       fontFamily: {
         sans: ['Quicksand', 'sans-serif'],
+        cursive: ['WindSong', 'cursive']
       },
 
       

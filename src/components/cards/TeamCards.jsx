@@ -8,7 +8,7 @@ const TeamCards = ({ imgSrc, name, title, onClick }) => {
             <img src={imgSrc} alt={`${name} avatar`}   
               className='w-40 rounded-full border-2 border-azure'
             />
-            <h5 className='text-midnight font-bold text-xl '>
+            <h5 className='text-spaceCadet font-bold text-xl underline'>
               {name}
             </h5>
             <p className='text-azure font-medium text-lg'>

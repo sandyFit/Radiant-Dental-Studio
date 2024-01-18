@@ -7,13 +7,17 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 const ContactCard = () => {
   return (
-      <div className='bg-spanishBlue h-[38.70rem] w-[30rem] flex flex-col items-center space-y-4 relative z-10'>
+    <div className='bg-spanishBlue h-[38.70rem] w-[30rem] flex flex-col items-center space-y-4 
+      relative z-10'>
           <h4 className='text-white text-center text-2xl font-semibold mt-20'>
             CONTACT US
           </h4>
 
-          <div className='flex flex-col items-start'>
-            <div className='flex m-4'>
+      <div className='flex flex-col items-start px-16'>
+        <h5 className='text-spaceCadet text-center text-xl font-medium mb-4'>
+          Call today or request an appointment online.
+        </h5>
+            <div className='flex m-4'> 
               <LocationOnIcon/>
               <p className='w-48 ml-2 text-xl font-medium'>
                 Radiant Dental Studio
@@ -37,7 +41,7 @@ const ContactCard = () => {
             </div>
           </div>
 
-          <div className='flex justify-between space-x-14 pt-10'>
+          <div className='flex justify-between space-x-16 pt-10'>
             <InstagramIcon 
                 style={{ fontSize: '3rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s' }}
                 onMouseOver={(e) => e.target.style.opacity = 0.75}

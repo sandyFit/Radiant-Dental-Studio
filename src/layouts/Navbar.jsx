@@ -42,6 +42,11 @@ const Navbar = () => {
               </ScrollLink>
             </li>
             <li className='p-4 hover:underline'>
+              <ScrollLink to='faq' smooth={true} duration={500}>
+                FAQs
+              </ScrollLink>
+            </li>
+            <li className='p-4 hover:underline'>
               <ScrollLink to='contact' smooth={true} duration={500}>
                 Contact us
               </ScrollLink>
