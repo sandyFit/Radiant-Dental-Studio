@@ -1,7 +1,39 @@
+import { useState, useEffect } from 'react';
+import FloatingBtn from '../../components/ui/FloatingBtn';
+import { Element, animateScroll as scroll, scroller } from 'react-scroll';
 
 const About = () => {
+  const [showFloatingBtn, setShowFloatingBtn] = useState(false);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+
+    // Adjust the scroll threshold based on your layout
+    const scrollThreshold = 100;
+
+    if (scrollPosition > scrollThreshold) {
+      setShowFloatingBtn(true);
+    } else {
+      setShowFloatingBtn(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
+  useEffect(() => {
+    // Add event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="relative h-screen overflow-hidden">
+    <Element name="about" className="relative h-screen overflow-hidden">
       <div className="fixed inset-0 z-[-1]">
         <img
           src="/images/dental-office.jpg"
@@ -9,16 +41,23 @@ const About = () => {
           className="w-full h-full object-cover filter brightness-75"
         />
       </div>
-      <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet 
-        bg-opacity-[.55] text-white3">
+      <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.55] text-white3">
+        
+        <div className={`fixed right-36 bottom-12 z-[2000] ${showFloatingBtn ? '' : 'invisible'}`}>
+          <FloatingBtn onClick={scrollToTop}>
+            Book online
+          </FloatingBtn>
+        </div>
+
+
         <div className="w-3/5">
           <h2 className='text-center text-white3 text-6xl font-bold'>
-          Welcome to
-          <span className='text-azure' style={{ margin: ' 0 1rem' }}>
-            Radiant 
-          </span>         
-          Dental Studio
-        </h2>
+            Welcome to
+            <span className='text-azure' style={{ margin: ' 0 1rem' }}>
+              Radiant 
+            </span>         
+            Dental Studio
+          </h2>
           <p className='text-2xl text-white3 font-medium mt-8'>
             At Radiant Dental Studio, your well-being is our top priority. We cultivate robust dentist-patient
             relationships by prioritizing your needs.
@@ -32,9 +71,16 @@ const About = () => {
           
         </div>
       </div>
-    </div>
+
+      {/* Scroll spy element for the 'about' section */}
+      <Element name="about-scroll-spy" className="scroll-spy" />
+
+      {/* Scroll event listener */}
+      {typeof window !== 'undefined' && (
+        window.addEventListener('scroll', handleScroll)
+      )}
+    </Element>
   );
 };
 
 export default About;
-

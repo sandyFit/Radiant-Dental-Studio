@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroButton from '../../components/ui/HeroButton'
+import HeroButton from '../../components/ui/HeroButton';
 
 const Hero = () => {
 
@@ -34,6 +34,7 @@ const Hero = () => {
       <div>
         <img className='w-[700px]' src="/images/tooth-hero.png" alt="tooth image" />
       </div>
+
     </div>
   )
 }

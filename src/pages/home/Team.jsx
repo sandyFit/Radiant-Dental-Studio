@@ -18,16 +18,16 @@ const Team = () => {
       <div className=" flex flex-col justify-center items-center">
         <div >
           <h2 className='text-white3 text-5xl font-bold'>
-            Exceptional
+            Quality
             <span className='text-azure' style={{ margin: ' 0 1rem' }}>
-              Dental Expertise
+              Dental Care
             </span>         
             at Your Fingerprints
           </h2>      
         </div> 
 
-        <div className='bg-fairBlue w-[75rem] h-[44rem] rounded-[50px] relative z-10 mt-24 mr-[18rem]'>
-          <div className='flex flex-wrap w-[55rem] relative left-24 top-[5.5rem] z-10'>
+        <div className='bg-fairBlue w-[75rem] h-[44rem] rounded-[50px] relative z-1 mt-24 mr-[18rem]'>
+          <div className='flex flex-wrap w-[55rem] relative left-24 top-[5.5rem]'>
             <TeamCards
               imgSrc='/images/doc1.jpeg'
               name='Nathan Roberts'

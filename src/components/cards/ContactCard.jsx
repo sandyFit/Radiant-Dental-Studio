@@ -41,7 +41,7 @@ const ContactCard = () => {
             </div>
           </div>
 
-          <div className='flex justify-between space-x-16 pt-10'>
+          <div className='flex justify-between space-x-16 pt-6'>
             <InstagramIcon 
                 style={{ fontSize: '3rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s' }}
                 onMouseOver={(e) => e.target.style.opacity = 0.75}
