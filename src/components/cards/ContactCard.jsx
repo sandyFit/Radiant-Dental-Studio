@@ -7,7 +7,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 const ContactCard = () => {
   return (
-    <div className='bg-spanishBlue h-[38.70rem] w-[30rem] flex flex-col items-center space-y-4 
+    <article className='bg-spanishBlue h-[38.70rem] w-[30rem] flex flex-col items-center space-y-4 
       relative z-10'>
           <h4 className='text-white text-center text-2xl font-semibold mt-20'>
             CONTACT US
@@ -57,9 +57,9 @@ const ContactCard = () => {
                 onMouseOver={(e) => e.target.style.opacity = 0.75}
                 onMouseOut={(e) => e.target.style.opacity = 1}
             />
-        </div>
-
-        </div>
+        
+      </div>
+    </article>
 
   )
 }

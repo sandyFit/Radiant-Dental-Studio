@@ -29,7 +29,7 @@ const Carousel = ({
 
 
     return (
-        <div>
+        <article>
             <div className='flex justify-center items-center'>
                 <ReviewsCard {...reviews[currentIndex]} />
             </div>
@@ -42,7 +42,7 @@ const Carousel = ({
                     <ChevronRightRounded style={{fontSize: '6rem'}}/>
                 </button>
             </div>
-        </div>
+        </article>
     );
 };
 

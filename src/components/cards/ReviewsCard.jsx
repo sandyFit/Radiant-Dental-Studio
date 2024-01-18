@@ -2,7 +2,7 @@ import StarIcon from '@mui/icons-material/Star';
 
 const ReviewsCard = ({name, srcImg, review}) => {
     return (
-        <div className='bg-spaceCadet w-[78rem] h-auto border-8 border-spanishBlue flex flex-col justify-start 
+        <article className='bg-spaceCadet w-[66rem] h-auto border-8 border-spanishBlue flex flex-col justify-start 
          p-16 mt-5 space-y-4 cursor-pointer relative'>
 
             <div className='space-x-2'>
@@ -37,7 +37,7 @@ const ReviewsCard = ({name, srcImg, review}) => {
 
 
             
-        </div>
+        </article>
 
     )
 }

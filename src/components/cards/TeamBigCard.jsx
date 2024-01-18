@@ -2,7 +2,7 @@ import React from 'react'
 
 const TeamBigCard = ({ firstName, lastName, bio }) => {
   return (
-    <div className='bg-spaceCadet w-[35rem] h-[42rem] absolute right-[-20rem] bottom-[-5rem] rounded-[38px]
+    <article className='bg-spaceCadet w-[35rem] h-[42rem] absolute right-[-20rem] bottom-[-5rem] rounded-[38px]
         flex flex-col justify-center items-center px-14 space-y-8 shadow-xl shadow-midnight'
     >
       <h2 className='text-center text-white2 text-4xl font-bold'>
@@ -23,7 +23,7 @@ const TeamBigCard = ({ firstName, lastName, bio }) => {
           </React.Fragment>
         ))}
       </p>
-    </div>
+    </article>
   );
 }
 

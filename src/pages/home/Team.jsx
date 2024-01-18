@@ -26,7 +26,7 @@ const Team = () => {
           </h2>      
         </div> 
 
-        <div className='bg-fairBlue w-[75rem] h-[44rem] rounded-[50px] relative z-1 mt-24 mr-[18rem]'>
+        <div className='bg-fairBlue w-[75rem] h-[44rem] rounded-[50px] relative z-1 mt-12 mr-[18rem]'>
           <div className='flex flex-wrap w-[55rem] relative left-24 top-[5.5rem]'>
             <TeamCards
               imgSrc='/images/doc1.jpeg'

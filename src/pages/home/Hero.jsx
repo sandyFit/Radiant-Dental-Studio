@@ -5,7 +5,7 @@ const Hero = () => {
 
 
   return (
-    <div className='bg-spaceCadet flex justify-around min-h-screen relative'
+    <section className='bg-spaceCadet flex justify-around min-h-screen relative'
       style={{ minHeight: `calc(100vh - 180px)` }}>
       
       <div className="absolute top-20 left-[12rem] w-[28rem] h-[28rem] rounded-full mix-blend-multiply filter blur-2xl 
@@ -35,7 +35,7 @@ const Hero = () => {
         <img className='w-[700px]' src="/images/tooth-hero.png" alt="tooth image" />
       </div>
 
-    </div>
+    </section>
   )
 }
 

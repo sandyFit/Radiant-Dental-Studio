@@ -3,7 +3,7 @@ import questions from '../../components/data/questions.json'
 
 const Faq = () => {
   return (
-    <div className='relative z-1 flex flex-col justify-center items-center bg-white3 h-[70rem]'>
+    <section className='relative z-1 flex flex-col justify-center items-center bg-white3 h-[70rem]'>
       <div>
         <h2 className='text-center text-spaceCadet text-5xl font-bold mt-30 mb-12'>
           Have Questions?
@@ -18,7 +18,7 @@ const Faq = () => {
           <QuestionCard key={index} question={question.question}  />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
