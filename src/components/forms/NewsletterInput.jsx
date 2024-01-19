@@ -1,4 +1,3 @@
-import NewsletterBtn from '../ui/NewsletterBtn';
 
 const NewsletterInput = () => {
     return (
@@ -15,9 +14,9 @@ const NewsletterInput = () => {
             />
 
             <div className="py-6">
-                <NewsletterBtn>
+                <button className='button transparent-btn w-[10rem] py-2'>
                     submit
-                </NewsletterBtn>
+                </button>
             </div>
 
             <p className='text-spanishBlue font-medium text-regular text-[.8rm]'>

@@ -1,5 +1,4 @@
 import React from 'react'
-import HeroButton from '../../components/ui/HeroButton';
 
 const Hero = () => {
 
@@ -26,9 +25,9 @@ const Hero = () => {
           is committed to providing you with top-notch dental care.
         </p>
 
-        <HeroButton>
+        <button className='filled-btn p-5 w-72'>
           Book online
-        </HeroButton>
+        </button>
       </div>
 
       <div>

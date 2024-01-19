@@ -18,7 +18,7 @@ const Reviews = () => {
           Radiant Dental Studio always appreciates feedback from our valued patients.
           To date, we're thrilled to have collected over 100 reviews with an average rating of 5 out of 5 stars.
           Please read what others are saying about us below, and as always, we would love to
-          <span className='text-azure border-b-2 border-spanishBlue' style={{ margin: ' 0 .6rem' }}>
+          <span className='border-b-2 border-spanishBlue' style={{ margin: ' 0 .6rem' }}>
             <a href="#">collect your feedback.</a>
           </span>
         </p>

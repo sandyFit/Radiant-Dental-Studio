@@ -1,5 +1,3 @@
-import React from 'react'
-import ViewMoreBtn from '../ui/ViewMoreBtn'
 
 const ServiceCard = ({ iconSrc, title, description }) => {
     return (
@@ -22,9 +20,9 @@ const ServiceCard = ({ iconSrc, title, description }) => {
                     {description}
                 </p>
 
-                    <ViewMoreBtn>
+                    <button className='transparent-btn p-3 w-72 mt-10'>
                         view more
-                    </ViewMoreBtn>
+                    </button>
             </div>
         </article>
   )

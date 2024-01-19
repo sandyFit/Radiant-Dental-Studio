@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import FloatingBtn from '../../components/ui/FloatingBtn';
 import { Element, animateScroll as scroll, scroller } from 'react-scroll';
 
 const About = () => {
@@ -44,9 +43,12 @@ const About = () => {
       <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.55] text-white3">
         
         <div className={`fixed right-36 bottom-12 z-[2000] ${showFloatingBtn ? '' : 'invisible'}`}>
-          <FloatingBtn onClick={scrollToTop}>
+          <button
+            type='button'
+            className='filled-btn px-10 py-4 '
+            onClick={scrollToTop}>
             Book online
-          </FloatingBtn>
+          </button>
         </div>
 
 

@@ -16,12 +16,38 @@
     a {
         @apply cursor-pointer;
     }
-
-    
 }
 
 @layer components {
     .button {
         @apply text-center font-semibold tracking-wider focus:outline-none border-2 rounded-lg text-xl uppercase;
+    }
+}
+
+@layer utilities {
+    .filled-btn {
+        @apply button text-white3 bg-azure hover:text-spanishBlue hover:bg-transparent 
+            border-transparent hover:border-2 hover:border-spanishBlue shadow-xl shadow-midnight
+    }
+
+    .transparent-btn {
+        @apply button text-spanishBlue bg-transparent hover:text-white hover:bg-azure 
+            border-spanishBlue shadow-xl shadow-midnight
+    }
+
+    .ul {
+        @apply flex justify-evenly text-[1.4rem] text-spanishBlue gap-2
+    }
+
+    .nav-link {
+        @apply p-4 relative tracking-[1px] hover:text-white3
+    }
+
+    .nav-link::after {
+        @apply content-[''] bg-spanishBlue h-[5px] w-[0%] left-0 bottom-[5px] rounded-xl absolute duration-500
+    }
+
+    .nav-link:hover::after {
+        @apply w-[100%]
     }
 }
