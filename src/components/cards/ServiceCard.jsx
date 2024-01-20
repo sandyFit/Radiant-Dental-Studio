@@ -1,5 +1,10 @@
 
 const ServiceCard = ({ iconSrc, title, description }) => {
+
+    const HandleClick = () => {
+        
+    }
+
     return (
         <article className='flex justify-center items-center space-x-4'>
             <div className='flex flex-col justify-center items-start w-[23rem] h-[34rem] bg-spaceCadet 
@@ -20,7 +25,9 @@ const ServiceCard = ({ iconSrc, title, description }) => {
                     {description}
                 </p>
 
-                    <button className='transparent-btn p-3 w-72 mt-10'>
+                <button className='transparent-btn p-3 w-72 mt-10'
+                    onClick={HandleClick}
+                >
                         view more
                     </button>
             </div>

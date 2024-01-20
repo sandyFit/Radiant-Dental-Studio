@@ -1,9 +1,11 @@
 import React from 'react'
 import ServiceCard from '../../components/cards/ServiceCard'
+import ServicesModal from '../../components/ui/ServicesModal'
+import serviceData from '../../components/data/services.json'
 
 const Services = () => {
   return (
-    <div className='bg-white flex flex-col justify-center items-center min-h-screen space-y-12'>
+    <div className='bg-white flex flex-col justify-center items-center min-h-screen space-y-12 relative'>
       <div className='flex flex-col w-4/5 justify-center space-y-8'>
         <h2 className='text-center text-spaceCadet text-5xl font-bold'>
           Discover Our Exceptional  
@@ -39,6 +41,14 @@ const Services = () => {
           iconSrc="/icons/dental-implant.png"
           title="Cosmetic Dentistry"
           description=" Tailored treatments for a beautiful, confident grin you'll proudly showcase every day."
+        />
+      </div>
+
+      <div className="absolute top-24 left-16">
+        <ServicesModal
+          title='Example Title'
+          description='Example Description'
+          services={serviceData} // Pass your array of services
         />
       </div>
     </div>
