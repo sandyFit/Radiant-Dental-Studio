@@ -63,7 +63,8 @@ const Navbar = () => {
         </div>
        
       </div>
-         <button className='transparent-btn px-10 py-4 ml-5' onClick={scrollToTop}>
+        <button className='transparent-btn hover:text-white hover:bg-azure px-10 py-4 ml-5'
+            onClick={scrollToTop}>
             book online
           </button>
       </div> 

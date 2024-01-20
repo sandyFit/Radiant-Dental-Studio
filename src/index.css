@@ -31,7 +31,7 @@
     }
 
     .transparent-btn {
-        @apply button text-spanishBlue bg-transparent hover:text-white hover:bg-azure 
+        @apply button text-spanishBlue bg-transparent  
             border-spanishBlue shadow-xl shadow-midnight
     }
 
@@ -50,4 +50,26 @@
     .nav-link:hover::after {
         @apply w-[100%]
     }
+
+    .item .activeIcon {
+        @apply hidden
+    }
+
+    .item.active .inactiveIcon {
+        @apply hidden
+    }
+
+    .item.active .activeIcon {
+        @apply block
+    }
+
+    .item:not(.active) .content {
+        @apply h-0 overflow-hidden py-0
+    }
+
+    .item.active {
+        @apply px-12 py-8
+    }
+
+
 }

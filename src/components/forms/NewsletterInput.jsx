@@ -14,7 +14,7 @@ const NewsletterInput = () => {
             />
 
             <div className="py-6">
-                <button className='button transparent-btn w-[10rem] py-2'>
+                <button className='transparent-btn w-[10rem] py-2 hover:text-white hover:bg-azure'>
                     submit
                 </button>
             </div>
