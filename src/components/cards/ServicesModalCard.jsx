@@ -2,17 +2,26 @@ import React from 'react';
 
 const ServicesModalCard = ({ service }) => {
   return (
-    <div className='border-2 border-spaceCadet w-[20rem] h-[12rem] p-4'>
+    <div className='w-[33rem] h-auto px-4'>
       <div className='flex items-center'>
-        <img src={service.icon} alt={`${service.name} icon`} className='mr-2' />
-        <h4>{service.name}</h4>
+        {/* <img src={service.icon} alt={`${service.name} icon`} className='mr-2' /> */}
+        <h4 className='text-spanishBlue text-3xl font-semibold text-center'>{service.name}</h4>
       </div>
-          <p>{Array.isArray(service['service-description']) ?
-              service['service-description'].join(' ') :
-              service['service-description']}
-          </p>
+
+      <div className="flex mt-4">
+        {Array.isArray(service.description) ? (
+          <ul>
+            {service.description.map((paragraph, index) => (
+              <li key={index}>{paragraph}</li>
+            ))}
+          </ul>
+        ) : (
+          <p className='text-lg font-medium'>{service.description}</p>
+        )}
+      </div>
     </div>
   );
 };
 
 export default ServicesModalCard;
+

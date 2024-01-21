@@ -2,57 +2,53 @@
     {
         "title": "General Dentistry",
         "description": "Treatments to ensure your teeth remain disease-free, functional, and aesthetic throughout your life.",
-        "service": [
+        "categories": [
             {
                 "icon": "/icons/dentist.png",
                 "name": "Examination",
-                "service-description": "We take considerable time getting to know you as a person and tailoring a dental preventative plan around you."
+                "description": "We take considerable time getting to know you as a person and tailoring a dental preventative plan around you."
             },
             {
                 "icon": "/icons/dentist.png",
                 "name": "Dental Emergencies",
-                "service-description": "Emergency appointments are available every day, and we try to be flexible so that we can see you as quickly as possible. If you are in pain, do not hesitate to contact us."
+                "description": "Emergency appointments are available every day, and we try to be flexible so that we can see you as quickly as possible. If you are in pain, do not hesitate to contact us."
             },
             {
                 "icon": "/icons/dentist.png",
                 "name": "Gum Desease",
-                "service-description": "We pay close attention to your gums at your examination, and if we notice any signs of gum disease we will alert you to this and provide you with advice on how to address it."
+                "description": "We pay close attention to your gums at your examination, and if we notice any signs of gum disease we will alert you to this and provide you with advice on how to address it."
             },
             {
                 "icon": "/icons/dentist.png",
                 "name": "Fillings",
-                "service-description": "Dental fillings are usually required when a tooth breaks or suffers from tooth decay. Tooth decay is a bacterial process that results in damage to the structure of the tooth. It doesn't always cause pain, and is usually identified in your examination."
+                "description": "Dental fillings are usually required when a tooth breaks or suffers from tooth decay. Tooth decay is a bacterial process that results in damage to the tooth's structure."
             },
             {
                 "icon": "/icons/dentist.png",
                 "name": "Extractions",
-                "service-description": "Before removing any teeth your dentist will discuss all replacement options with you and will also discuss any temporary replacement for the missing tooth before a more definitive option is placed."
+                "description": "Before removing any teeth your dentist will discuss all replacement options with you and will also discuss any temporary replacement for the missing tooth before a more definitive option is placed."
             },
             {
                 "icon": "/icons/dentist.png",
                 "name": "Children Dentistry",
-                "service-description": "Our team have all been trained in child behavioural management techniques and are very good at acclimatising your child to the dental environment and making your child comfortable in the dental chair."
+                "description": "Our team have all been trained in child behavioural management techniques and are very good at acclimatising your child to the dental environment and making your child comfortable in the dental chair."
             }
         ]
     },
     {
         "title": "Hygiene and Therapy",
         "description": "Treatments that keep your gums disease free and healthy throughout life.",
-        "service": [
+        "categories": [
             {
                 "icon": "/icons/dentist.png",
                 "name": "Hygiene Services",
-                "service-description": ["At Radiant Dental care we are supported by a great team of hygienists and therapists. They provide services ranging from stain removal, scale and polish to a more comprehensive deep mouth clean in patients suffering from gum disease.",
-                                "Your gums help provide the foundations for your teeth so it is essential that they remain healthy.",
-                                "So, in cases of gum disease: Once we have your gum disease under control, our hygienists will work with you on a maintenance plan to ensure that your mouth continues to remain free of disease.",
-                                "Our hygienists will spend a lot of time teaching you a variety of methods on how to keep your teeth clean to prevent gum disease and will produce a tailored plan just for you.",
-                                "We will take regular measurements in your mouth to ensure that the treatment we are providing and the hard work you are doing at home is leading to success."]
+                "description": "At Radiant Dental care we are supported by a great team of hygienists and therapists. They provide services ranging from stain removal, scale and polish to a more comprehensive deep mouth clean in patients suffering from gum disease. Your gums help provide the foundations for your teeth so it is essential that they remain healthy."
+
             },
             {
                 "icon": "/icons/dentist.png",
                 "name": "Therapy",
-                "service-description": ["We are fortunate that our hygienists are also qualified dental therapists. They have undergone extensive training similar to that of dentists, which means they are fully qualified to undertake examinations, x-rays and fillings.",
-                                "Our therapy services are offered to children in the practice. Our therapists have all been trained in child behavioural management techniques and are very good at acclimatising your child to the dental environment and making your child comfortable in the dental chair."]
+                "description": "We are fortunate that our hygienists are also qualified dental therapists. They have undergone extensive training similar to that of dentists, which means they are fully qualified to undertake examinations, x-rays and fillings. Our therapists have all been trained in child behavioural management techniques."
             }
            
         ]
@@ -60,24 +56,22 @@
     {
         "title": "Orthodontics",
         "description": "Treatments that enable you have beautifully aligned teeth.",
-        "service": [
+        "categories": [
             {
                 "icon": "/icons/dentist.png",
-                "name": "Invisilighn",
-                "service-description": ["Invisalign is an orthodontic treatment that is used to align misaligned teeth. Traditionally, teeth have been aligned using fixed metal wires, more commonly known as “Train Tracks”. Invisalign, however, consists of see-through braces known as aligners that allow your teeth to be moved discretely without anyone knowing.",
-                                "Each case has a series of aligners that slowly move your teeth into position. The aligners need to be changed every 1-2 weeks, and they can be changed directly by you. Your dentist will however assess you approximately every 4 weeks to ensure the teeth are moving as intended.",
-                                "The treatment time varies and is case specific, but on average a case could take anywhere from 12-18 months to complete."]
+                "name": "Invisilign",
+                "description": "Invisalign is an orthodontic treatment that is used to align misaligned teeth. It consists of see-through braces known as aligners that allow your teeth to be moved discretely without anyone knowing. Each case has a series of aligners that slowly move your teeth into position. The aligners need to be changed every 1-2 weeks, and they can be changed directly by you."                                
 
             },
             {
                 "icon": "/icons/dentist.png",
                 "name": "Night Guards",
-                "service-description": "If you wake up with a throbbing and tender jaw, you might be grinding your teeth or clench your jaw when you sleep. You might also experience distressing headaches and toothaches. Wearing a night guard while you sleep protects for your dental health and enhances your sleep quality. Night guards work by placing a barrier between your upper and lower teeth."
+                "description": "If you wake up with a throbbing and tender jaw, you might be grinding your teeth or clench your jaw when you sleep. You might also experience distressing headaches and toothaches. Wearing a night guard while you sleep protects for your dental health and enhances your sleep quality. Night guards work by placing a barrier between your upper and lower teeth."
             },
             {
                 "icon": "/icons/dentist.png",
                 "name": "Ceramic Braces",
-                "service-description": "Ceramic braces — sometimes called clear braces — work the same way as metal braces. The key difference is that the brackets, wires and ligatures are tooth-colored, so they blend in with your smile. Ceramic braces are still visible, but they're less noticeable. One drawback to ceramic braces is that they're more fragile than metal braces, so they're more likely to break."
+                "description": "Ceramic braces — sometimes called clear braces — work the same way as metal braces. The key difference is that the brackets, wires and ligatures are tooth-colored, so they blend in with your smile. Ceramic braces are still visible, but they're less noticeable. One drawback to ceramic braces is that they're more fragile than metal braces, so they're more likely to break."
             }
             
         ]
@@ -85,22 +79,21 @@
     {
         "title": "Cosmetic Dentistry",
         "description": "Treatments that enable you have beautifully aligned teeth.",
-        "service": [
+        "categories": [
             {
                 "icon": "/icons/dentist.png",
                 "name": "Teeth Whitenning",
-                "service-description": "Teeth whitening removes years of dingy stains from your teeth. Coffee, tea, wine, tobacco, and chocolate can dull tooth enamel. Simple and safe, most patients don't realize how discolored their teeth are until they see a new smile emerge."
+                "description": "Teeth whitening removes years of dingy stains from your teeth. Coffee, tea, wine, tobacco, and chocolate can dull tooth enamel. Simple and safe, most patients don't realize how discolored their teeth are until they see a new smile emerge."
             },
             {
                 "icon": "/icons/dentist.png",
                 "name": "Veneers",
-                "service-description": "Veneers are thin pieces of porcelain that are tooth shaped and attach to the front surface of your teeth.They are commonly used for anterior teeth to enhance the shape, size and colour of them."
+                "description": "Veneers are thin pieces of porcelain that are tooth shaped and attach to the front surface of your teeth.They are commonly used for anterior teeth to enhance the shape, size and colour of them."
             },
             { 
                 "icon": "/icons/dentist.png",
                 "name": "Smile Makeovers",
-                "service-description": ["All of our dentists are trained in providing “Smile Makeovers”.",
-                    "Smile makeovers often consist of several treatment modalities, including but not limited to, tooth whitening, orthodontics, white fillings and veneers. This is a very tailored plan and will be different for every patient."]
+                "description": "Smile makeovers often consist of several treatment modalities, including but not limited to, tooth whitening, orthodontics, white fillings and veneers. This is a very tailored plan and will be different for every patient."
 
             }
             

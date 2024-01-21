@@ -1,9 +1,19 @@
-import React from 'react'
-import ServiceCard from '../../components/cards/ServiceCard'
-import ServicesModal from '../../components/ui/ServicesModal'
-import serviceData from '../../components/data/services.json'
+import React, { useState } from 'react';
+import ServiceCard from '../../components/cards/ServiceCard';
+import ServicesModal from '../../components/ui/ServicesModal';
+import serviceData from '../../components/data/services.json';
+
 
 const Services = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState(null);
+
+  const openModal = (service) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
   return (
     <div className='bg-white flex flex-col justify-center items-center min-h-screen space-y-12 relative'>
       <div className='flex flex-col w-4/5 justify-center space-y-8'>
@@ -26,29 +36,36 @@ const Services = () => {
           iconSrc="/icons/broken-tooth.png"
           title="General Dentistry"
           description="Ensure lifelong dental health with treatments for function, aesthetics, and prevention."
+          onClick={() => openModal(serviceData[0])}
         />
         <ServiceCard
           iconSrc="/icons/teeth.png"
           title="Hygiene and Therapy"
           description="Our preventive treatments safeguard against disease, promoting a consistently radiant smile."
+          onClick={() => openModal(serviceData[1])}
+
         />
         <ServiceCard
           iconSrc="/icons/braces.png"
           title="Orthodontics"
           description="Enhance your smile with premium treatments for beautifully aligned teeth."
+          onClick={() => openModal(serviceData[2])}
+
         />
         <ServiceCard
           iconSrc="/icons/dental-implant.png"
           title="Cosmetic Dentistry"
           description=" Tailored treatments for a beautiful, confident grin you'll proudly showcase every day."
+          onClick={() => openModal(serviceData[3])}
+
         />
       </div>
 
-      <div className="absolute top-24 left-16">
+      <div className="absolute -top-8 left-[16.5rem]">
         <ServicesModal
-          title='Example Title'
-          description='Example Description'
-          services={serviceData} // Pass your array of services
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          service={selectedService}
         />
       </div>
     </div>

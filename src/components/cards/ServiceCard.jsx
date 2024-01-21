@@ -1,9 +1,6 @@
 
-const ServiceCard = ({ iconSrc, title, description }) => {
+const ServiceCard = ({ iconSrc, title, description, onClick }) => {
 
-    const HandleClick = () => {
-        
-    }
 
     return (
         <article className='flex justify-center items-center space-x-4'>
@@ -26,13 +23,14 @@ const ServiceCard = ({ iconSrc, title, description }) => {
                 </p>
 
                 <button className='transparent-btn p-3 w-72 mt-10'
-                    onClick={HandleClick}
+                    onClick={onClick}
                 >
                         view more
-                    </button>
+                </button>
             </div>
         </article>
   )
 }
 
-export default ServiceCard
+export default ServiceCard;
+
