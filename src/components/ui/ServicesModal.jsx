@@ -1,57 +1,56 @@
-import React from 'react';
-import { Close } from '@mui/icons-material';
-import ServicesModalCard from '../cards/ServicesModalCard';
+import React, { useState, useEffect } from 'react'
+import { ChevronLeft, ChevronRight } from '@mui/icons-material';
+import Modal from '../ui/Modal';
 
-const ServicesModal = ({ isOpen, onClose, service }) => {
-  const handleClose = () => {
-    // Call the onClose function to close the modal
-    onClose();
-  };
+const ModalCarousel = ({ isOpen, services }) => {
+    
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-  return (
-    <article className={`bg-white3 flex justify-center items-center w-[85rem] h-[52rem] mt-12 rounded-xl
-        relative text-white2 ${isOpen ? 'absolute' : 'hidden'}`}>
-      <button className="absolute left-[82.5rem] bottom-[50rem] text-spaceCadet cursor-pointer"
-        onClick={handleClose}>
-        <Close />
-      </button>
-      <div className='flex flex-col justify-center items-center px-8 py-12 bg-spaceCadet  w-[79.5rem] h-[49rem] 
-        rounded-xl'>
-        {/* Check if service is defined before accessing its properties */}
-        {service && (
-          <>
-            <h1 className='text-spanishBlue text-4xl font-bold mb-4'>
-              {service.title}
-            </h1>
-            <p className='text-xl font-semibold'>
-              {service.description}
-            </p>
+    // Check if services is defined and not an empty array
+    if (!services || services.length === 0) {
+        return null; // or handle this case appropriately
+    }
 
-            <div className="flex flex-wrap w-[90%]">
-              {/* Check if service.categories is an array before mapping */}
-              {Array.isArray(service.categories) &&
-                service.categories.map((category, index) => (
-                  <div key={index}
-                    className='my-6'
-                  >
-                    
-                    {Array.isArray(category.description) ? (
-                      <div className=''>
-                        {category.description.map((desc, descIndex) => (
-                          <ServicesModalCard key={descIndex} service={{ name: category.name, description: desc }} />
-                        ))}
-                      </div>
-                    ) : (
-                      <ServicesModalCard key={index} service={category} />                   
-                    )}
-                  </div>
-                ))}
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
+    }
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => {
+            return prevIndex === 0 ? services.length - 1 : prevIndex - 1;
+        })
+    }
+
+    useEffect(() => {
+        console.log('isOpen changed:', isOpen);
+    }, [isOpen]);
+
+
+    return (
+        <article>
+            {isOpen && (
+                <div className="flex justify-center items-center">
+                    <Modal isOpen={isOpen} {...services[currentIndex]} />
+                </div>
+            )}
+
+
+
+            <div className="relative">
+                <button className='absolute top-[25rem] left-[6rem] text-white bg-azure w-12 h-12 rounded-full z-50' 
+                    onClick={prevSlide}
+                >
+                    <ChevronLeft style={{fontSize:'3rem'}}/>
+                </button>
+
+                <button className='absolute top-[25rem] right-[-40rem] text-white bg-azure w-12 h-12 rounded-full z-50' 
+                    onClick={nextSlide}
+                >
+                    <ChevronRight style={{fontSize:'3rem'}}/>
+                </button>
             </div>
-          </>
-        )}
-      </div>
-    </article>
-  );
-};
+        </article>
+    )
+}
 
-export default ServicesModal;
+export default ModalCarousel;

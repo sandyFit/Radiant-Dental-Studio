@@ -5,7 +5,7 @@ const TeamCards1 = ({ imgSrc, name, title, onClick }) => {
     const [isClicked, setIsClicked] = useState(false);
 
     const handleCardClick = () => {
-        setIsClicked(!value);
+        setIsClicked(value => !value);
         onClick();
     };
 

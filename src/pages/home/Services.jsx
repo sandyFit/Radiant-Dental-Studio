@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import ServiceCard from '../../components/cards/ServiceCard';
-import ServicesModal from '../../components/ui/ServicesModal';
 import serviceData from '../../components/data/services.json';
-
+import ModalCarousel from '../../components/cards/ModalCarousel';
 
 const Services = () => {
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedService, setSelectedService] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedService, setSelectedService] = useState(null);
 
-  const openModal = (service) => {
-    setSelectedService(service);
-    setIsModalOpen(true);
-  };
+    const openModal = (service) => {
+        setSelectedService(service);
+        setIsModalOpen(true);
+    };
+
 
   return (
     <div className='bg-white flex flex-col justify-center items-center min-h-screen space-y-12 relative'>
@@ -61,12 +61,14 @@ const Services = () => {
         />
       </div>
 
-      <div className="absolute -top-8 left-[16.5rem]">
-        <ServicesModal
+      <div className="absolute top-2 left-[32.5rem]">
+        {isModalOpen && (
+          <ModalCarousel
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          service={selectedService}
+          services={[selectedService]} // Wrap selectedService in an array or provide an array of services
         />
+        )}
       </div>
     </div>
   )
