@@ -1,8 +1,17 @@
+import { Close } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import Submenu from '../components/ui/Submenu';
 
 const Navbar = () => {
+
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => {
+    setClick(!click);
+  }
+
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -19,7 +28,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Menu */}
+        {/* Desktop */}
         <div className="hidden 2xl:flex flex-col relative">
            <ul className="ul">
               
@@ -66,11 +75,22 @@ const Navbar = () => {
           book online
         </button>
 
-        <button className="md:hidden ml1 rounded p-1 text-spanishBlue hover:bg-cyan-400 
-                hover:text-zinc-50 transition-colors focus:ring-2 focus:ring-slate-400"
-        >
-          <MenuIcon/>
-        </button>
+        {/* Mobile */}
+
+        {/* Mobile button container */}
+        <div className="xl:hidden space-y-4">
+          <button className="rounded p-1 text-spanishBlue border-2 border-spanishBlue hover:bg-cyan-400 
+                  hover:text-zinc-50 transition-colors focus:ring-2 focus:ring-slate-400"
+            onClick={handleClick}
+          >
+            {click ? <MenuIcon /> : <Close />}
+          </button>
+
+          <Submenu/>
+          
+        </div>
+        
+
       </div> 
     </nav>
   );
