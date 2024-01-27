@@ -13,7 +13,7 @@ const Submenu = () => {
 
 
     return (
-        <article className='xl:hidden relative space-y-4 p-6'>
+        <article className='xl:hidden relative space-y-8 p-6'>
             <button className="rounded p-1 text-spanishBlue border-2 border-spanishBlue hover:bg-cyan-400 
                   hover:text-zinc-50 transition-colors focus:ring-2 focus:ring-slate-400"
                 onClick={toggleSubMenu}

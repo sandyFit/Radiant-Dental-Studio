@@ -1,18 +1,11 @@
-// import { Close } from '@mui/icons-material';
-// import MenuIcon from '@mui/icons-material/Menu';
+
 import React from 'react';
 import Submenu from '../components/ui/Submenu';
 import MainMenu from '../components/ui/MainMenu';
+import Test from '../components/ui/Test';
 
 const Navbar = () => {
 
-  // const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-
-
-  // const toggleSubmenu = () => {
-  //   console.log("Toggling submenu. Current state:", isSubmenuOpen);
-  //   setIsSubmenuOpen(!isSubmenuOpen);
-  // }
 
   return (
     <nav className='bg-spaceCadet py-12 '>
@@ -27,10 +20,10 @@ const Navbar = () => {
         </div>
 
         {/* Desktop */}
-        <div className="hidden 2xl:flex flex-col relative">
+        <div className="hidden 2xl:flex flex-col relative text-base lg:text-lg xl:text-xl">
            <MainMenu/>  
-       
-      </div>
+        </div>
+
         <button className='hidden 2xl:block transparent-btn hover:text-white hover:bg-azure px-10 py-4 ml-5'>
           book online
         </button>

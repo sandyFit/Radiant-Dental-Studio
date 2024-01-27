@@ -4,14 +4,12 @@ const Hero = () => {
 
 
   return (
-    <section className='bg-spaceCadet flex justify-around min-h-screen relative'
+    <section className='bg-spaceCadet flex lg:justify-start xl:justify-around relative'
       style={{ minHeight: `calc(100vh - 180px)` }}>
       
-      <div className="absolute top-20 left-[12rem] w-[28rem] h-[28rem] rounded-full mix-blend-multiply filter blur-2xl 
-          opacity-45 bg-gradient-to-r from-oceanBlue to-azure">
-        </div>
-      <div className='flex flex-col w-1/3 space-y-12 pt-[12rem] pl-12'>
-        <h1 className='text-white text-8xl font-bold w-full max-w-12'>
+      <div className='flex flex-col w-1/3 space-y-12 pt-[2rem] md:pt-[6rem] lg:pt-[10rem] xl:pt-[12rem] 
+        pl-12 md:pl-[6rem] lg:pl-[10rem] xl:pl-12'>
+        <h1 className='text-6xl md:text-7xl lg:text-8xl text-white font-bold w-full max-w-12 '>
           <span >
             Where
             <span className='text-spanishBlue' style={{ margin: ' 0 1rem' }}>
@@ -20,17 +18,18 @@ const Hero = () => {
           </span>
           Begin
         </h1>
-        <p className='text-spanishBlue text-2xl font-medium w-[55rem]'>
+        <p className='text-spanishBlue text-lg md:text-xl lg:text-2xl font-medium w-[30rem] md:w-[40rem] 
+          lg:w-[50rem] xl:w-[55rem]'>
           Let us take care of your teeth. Our dedicated team of professionals 
           is committed to providing you with top-notch dental care.
         </p>
 
-        <button className='filled-btn p-5 w-72'>
+        <button className='filled-btn p-3 md:p-5 w-72'>
           Book online
         </button>
       </div>
 
-      <div>
+      <div className='hidden xl:block'>
         <img className='w-[700px]' src="/images/tooth-hero.png" alt="tooth image" />
       </div>
 
@@ -38,4 +37,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;
