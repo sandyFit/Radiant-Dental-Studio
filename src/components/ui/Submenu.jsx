@@ -21,7 +21,7 @@ const Submenu = () => {
                 {isSubmenuOpen ? <Close /> : <MenuIcon />}
             </button>
             
-            <ul className={`lg:w-72 bg-spanishBlue w-60 h-auto duration-500 space-y-auto pl-6 pt-12 pb-16
+            <ul className={` bg-spanishBlue w-[18rem] h-auto duration-500 space-y-auto pl-6 pt-12 pb-16
                 absolute right-6 z-50 ${isSubmenuOpen ? 'visible' : 'hidden'}`}
             >
                 <h4 className='text-2xl font-semibold'>Menu</h4>
