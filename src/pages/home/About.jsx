@@ -52,15 +52,16 @@ const About = () => {
         </div>
 
 
-        <div className="w-3/5">
-          <h2 className='text-center text-white3 text-6xl font-bold'>
+        <div className="flex flex-col justify-center items-center">
+          <h2 className='text-center text-white3 text-3xl md:text-5xl  xl:text-6xl font-bold
+            w-2/3 lg:w-2/4 xl:w-2/4 2xl:w-3/5'>
             Welcome to
             <span className='text-azure' style={{ margin: ' 0 1rem' }}>
               Radiant 
             </span>         
             Dental Studio
           </h2>
-          <p className='text-2xl text-white3 font-medium mt-8'>
+          <p className='text-lg md:text-xl xl:text-2xl text-white3 font-medium mt-8 w-3/4 lg:w-2/4 xl:w-2/4 2xl:w-3/5'>
             At Radiant Dental Studio, your well-being is our top priority. We cultivate robust dentist-patient
             relationships by prioritizing your needs.
             <br/><br/>
