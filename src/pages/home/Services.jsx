@@ -49,18 +49,19 @@ const Services = () => {
       </div>
 
       {/* Cards Mobile */}
-      <div className='lg:hidden flex flex-col justify-center items-center w-3/4 gap-4 pb-12'>
+      <div className='lg:hidden flex flex-col justify-center items-center w-3/4 gap-4 pb-24'>
         {serviceCardData.map((service, index) => (
                     <MobileServiceCard
                         key={index}
                         iconSrc={service.iconSrc}
                         title={service.title}
+                        description={service.description}
                         onClick={() => openModal(serviceData[index])}
                     />
                 ))}
       </div>
 
-      <div className="absolute top-2 left-[32.5rem]">
+      <div className="absolute top-2 md:top-[22rem] lg:top-24 left-0 md:left-[6.6rem] xl:left-[18rem] 2xl:left-[32.5rem]">
         {isModalOpen && (
           <ModalCarousel
           isOpen={isModalOpen}
@@ -69,21 +70,8 @@ const Services = () => {
         />
         )}
       </div>
-
-      <div className="absolute">
-        {isModalOpen && (
-          <ModalCarousel
-            isOpen={isModalOpen}
-            onClose={() => setIsModalOpen(false)}
-            services={[selectedService]}
-          />
-        )}
-      </div>
-
-
-      
     </div>
   )
 }
 
-export default Services
+export default Services;
