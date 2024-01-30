@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import serviceCardData from '../../components/data/servicesCardData.json';
-import ModalCarousel from '../../components/cards/ModalCarousel';
 import ServicesCarousel from '../../components/cards/ServicesCarousel';
+import servicesData from '../../components/data/services.json'
+import Modal from '../../components/ui/ServicesModalCarousel';
 
 const Services = () => {
 
@@ -9,14 +10,19 @@ const Services = () => {
     const [selectedService, setSelectedService] = useState(null);
 
   const openModal = (service) => {
-      
-    console.log('Opening modal with service:', service); 
-    if (service) {
-        setSelectedService(service);
-        setIsModalOpen(true);
+        console.log('Opening modal with service:', service); 
+        if (service) {
+            // Find the full service data, including categories
+            const fullServiceData = servicesData.find(s => s.title === service.title);
+            if (fullServiceData) {
+                setSelectedService(fullServiceData);
+            } else {
+                // Fallback if service is not found in services.json
+                setSelectedService(service);
+            }
+            setIsModalOpen(true);
+        };
     };
-      
-  };
 
 
   return (
@@ -52,11 +58,11 @@ const Services = () => {
 
       <div className="absolute top-2 md:top-[22rem] lg:top-24 left-0 md:left-[6.6rem] xl:left-[18rem] 2xl:left-[32.5rem]">
         {/* Modal rendering condition */}
-        {isModalOpen && (
-            <ModalCarousel
+        {isModalOpen && selectedService && (
+            <Modal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
-                services={[selectedService]} // Ensure this data is structured correctly for your modal
+                service={selectedService}
             />
         )}
       </div>

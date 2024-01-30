@@ -2,16 +2,25 @@ import React, { useState } from 'react';
 import { Close } from "@mui/icons-material";
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
-const Modal = ({ isOpen, service, onClose }) => {
+const Modal = ({ isOpen, service = {}, onClose }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    console.log('Service object:', service);
+    console.log('Categories:', service.categories);
 
     const isValidIndex = Array.isArray(service.categories) && currentIndex >= 0 && currentIndex < service.categories.length;
     const currentCategory = isValidIndex ? service.categories[currentIndex] : null;
 
+    if (!service) {
+    console.log('Service is undefined');
+    return null;
+}
+
     const nextSlide = () => {
         if (isValidIndex) {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % service.categories.length);
-        }
+        console.log(service.categories)
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % service.categories.length);
+    }
     };
 
     const prevSlide = () => {
