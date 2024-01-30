@@ -4,11 +4,11 @@ const Hero = () => {
 
 
   return (
-    <section className='bg-spaceCadet flex lg:justify-start xl:justify-around relative'
+    <section className='bg-spaceCadet flex lg:justify-start 2xl:justify-around relative'
       style={{ minHeight: `calc(100vh - 180px)` }}>
       
       <div className='flex flex-col w-1/3 space-y-12 pt-[7rem] md:pt-[10rem] xl:pt-[12rem] 
-        pl-12 md:pl-[6rem] lg:pl-[10rem] xl:pl-12'>
+        pl-12 md:pl-[6rem] lg:pl-[10rem] 2xl:pl-12'>
         <h1 className='text-[2.7rem] md:text-7xl lg:text-8xl text-white font-bold w-full max-w-12 
           leading-[3rem]'>
           <span >
@@ -30,7 +30,7 @@ const Hero = () => {
         </button>
       </div>
 
-      <div className='hidden xl:block'>
+      <div className='hidden 2xl:block'>
         <img className='w-[700px]' src="/images/tooth-hero.png" alt="tooth image" />
       </div>
 

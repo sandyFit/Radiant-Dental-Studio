@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Modal from '../ui/Modal';
 
 const ModalCarousel = ({ isOpen, services, onClose }) => {
-    
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
@@ -10,15 +9,14 @@ const ModalCarousel = ({ isOpen, services, onClose }) => {
             {isOpen && (
                 <div className="flex justify-center items-center">
                     <Modal 
-                        isOpen={isOpen} 
-                        {...services[currentIndex]} 
-                        onClose={onClose} // Pass the onClose prop to Modal
+                        isOpen={isOpen}
+                        service={services[currentIndex]} 
+                        onClose={onClose} 
                     />
                 </div>
             )}
-
         </article>
-    )
-}
+    );
+};
 
 export default ModalCarousel;

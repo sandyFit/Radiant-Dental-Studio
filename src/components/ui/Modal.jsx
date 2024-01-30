@@ -2,26 +2,27 @@ import React, { useState } from 'react';
 import { Close } from "@mui/icons-material";
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
-const Modal = ({ isOpen, title, description, categories, onClose }) => {
+const Modal = ({ isOpen, service, onClose }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Check if services is defined and not an empty array
-    if (!services || services.length === 0) {
-        return null; // or handle this case appropriately
-    }
+    const isValidIndex = Array.isArray(service.categories) && currentIndex >= 0 && currentIndex < service.categories.length;
+    const currentCategory = isValidIndex ? service.categories[currentIndex] : null;
 
     const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % categories.length);
+        if (isValidIndex) {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % service.categories.length);
+        }
     };
 
     const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + categories.length) % categories.length);
+        if (isValidIndex) {
+            setCurrentIndex((prevIndex) => (prevIndex - 1 + service.categories.length) % service.categories.length);
+        }
     };
 
     const handleClose = () => {
-    // Call the onClose function to close the modal
-    onClose();
-  };
+        onClose();
+    };
 
     if (!isOpen) return null;
 
@@ -39,40 +40,39 @@ const Modal = ({ isOpen, title, description, categories, onClose }) => {
             
             <div className="bg-fairBlue p-8 rounded-lg w-[90%] md:max-w-2xl shadow-xl 
                 shadow-slate-400 md:flex md:flex-col md:justify-center md:items-center">
-                <h1 className="text-xl lg:text-2xl text-azure font-bold mb-4">{title}</h1>
-                <p className="text-spaceCadet text-lg lg:text-xl mb-6">{description}</p>
+                <h1 className="text-xl lg:text-2xl text-azure font-bold mb-4">{service.title}</h1>
+                <p className="text-spaceCadet text-lg lg:text-xl mb-6">{service.description}</p>
 
-                <ul className="list-none pl-4 border-2 border-azure p-6 rounded-lg">
-                    <li className="mb-2 ">
-                        <div className="flex items-start gap-4">
-                            {/* <div className="">
-                                <img src={categories[currentIndex].icon} alt="Category Icon" className="w-18" />
-                            </div> */}
-                            <div>
-                                <h4 className="text-lg text-azure font-semibold">{categories[currentIndex].name}</h4>
-                                <p className="text-spaceCadet">{categories[currentIndex].description}</p>
+                {currentCategory && (
+                    <ul className="list-none pl-4 border-2 border-azure p-6 rounded-lg">
+                        <li className="mb-2 ">
+                            <div className="flex items-start gap-4">
+                                <div>
+                                    <h4 className="text-lg text-azure font-semibold">{currentCategory.name}</h4>
+                                    <p className="text-spaceCadet">{currentCategory.description}</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                )}
 
-                <div className="relative">
-                    <button className='absolute top-[5rem] lg:-top-[10rem] right-[10rem] lg:right-[20rem] transform 
-                        -translate-y-1/2 text-white bg-azure w-12 h-12 rounded-full z-50'
-                        onClick={prevSlide}
-                    >
-                        <ChevronLeft style={{ fontSize: '3rem' }} />
-                    </button>
+                {service.categories && service.categories.length > 1 && (
+                    <div className="relative">
+                        <button className='absolute top-[5rem] lg:-top-[10rem] right-[10rem] lg:right-[20rem] transform 
+                            -translate-y-1/2 text-white bg-azure w-12 h-12 rounded-full z-50'
+                            onClick={prevSlide}
+                        >
+                            <ChevronLeft style={{ fontSize: '3rem' }} />
+                        </button>
 
-                    <button className='absolute top-[5rem] lg:-top-[10rem] left-[10rem] lg:left-[20rem] transform 
-                        -translate-y-1/2 text-white bg-azure w-12 h-12 rounded-full z-50'
-                        onClick={nextSlide}
-                    >
-                        <ChevronRight style={{ fontSize: '3rem' }} />
-                    </button>
-                </div>
-                
-                
+                        <button className='absolute top-[5rem] lg:-top-[10rem] left-[10rem] lg:left-[20rem] transform 
+                            -translate-y-1/2 text-white bg-azure w-12 h-12 rounded-full z-50'
+                            onClick={nextSlide}
+                        >
+                            <ChevronRight style={{ fontSize: '3rem' }} />
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );
