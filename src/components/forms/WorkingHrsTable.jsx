@@ -2,7 +2,8 @@ import React from 'react'
 
 const WorkingHrsTable = () => {
   return (
-    <table className='text-spanishBlue text-lg font-medium' style={{ borderCollapse: 'separate', borderSpacing: '0 1rem' }}>
+    <table className='text-spanishBlue text-md md:text-lg font-medium'
+      style={{ borderCollapse: 'separate', borderSpacing: '0 1rem' }}>
       <tbody>
         <tr>
           <td>Monday</td>

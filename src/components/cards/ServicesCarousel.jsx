@@ -8,7 +8,7 @@ const Carousel = ({ services, onClick, autoSlide, autoSlideInterval }) => {
     const getVisibleCards = () => {
         const width = window.innerWidth;
         if (width < 640) return 1;
-        if (width < 1024) return 2;
+        if (width <= 1280) return 2;
         return 3;
     };
 

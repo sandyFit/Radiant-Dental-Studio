@@ -37,12 +37,14 @@ const About = () => {
         <img
           src="/images/dental-office.jpg"
           alt="Background"
-          className="w-full h-full object-cover filter brightness-75"
+          className="min-w-full min-h-screen object-cover filter brightness-75"
         />
       </div>
-      <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.55] text-white3">
+      <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.55] 
+          text-white3">
         
-        <div className={`fixed right-36 bottom-12 z-[2000] ${showFloatingBtn ? '' : 'invisible'}`}>
+        <div className={`hidden lg:block fixed right-12 lg:right-36 bottom-12 z-[2000] 
+            ${showFloatingBtn ? '' : 'invisible'}`}>
           <button
             type='button'
             className='filled-btn px-10 py-4 '

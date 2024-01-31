@@ -26,7 +26,7 @@ const Services = () => {
 
 
   return (
-    <div className='bg-white flex flex-col justify-center items-center min-h-screen space-y-12 relative'>
+    <div className='bg-white flex flex-col justify-center items-center min-h-screen space-y-12 relative pt-0 xl:pt-20 pb-24'>
       <div className='flex flex-col justify-center items-center space-y-8'>
         <h2 className='text-center text-spaceCadet text-3xl md:text-5xl font-bold w-2/3 
           lg:w-2/4 xl:w-2/4 2xl:w-3/5 pt-20 lg:pt-4'>
@@ -36,7 +36,7 @@ const Services = () => {
           </span>         
         </h2>
 
-        <p className='text-lightBlue text-lg md:text-xl xl:text-2xl font-semibold w-3/4 lg:w-2/4 xl:w-2/4 2xl:w-3/5'>
+        <p className='text-lightBlue text-lg md:text-xl xl:text-2xl font-semibold w-3/4 md:w-2/4 2xl:w-3/5'>
           We provide a wide range of treatments, including cosmetic dentistry. Our commitment is rooted in
           assisting patients in preserving lifelong healthy teeth. Trust us for diverse services aimed at
           enhancing both the aesthetics and longevity of your smile.
@@ -56,7 +56,7 @@ const Services = () => {
       </div>
 
 
-      <div className="absolute top-2 md:top-[22rem] lg:top-24 left-0 md:left-[6.6rem] xl:left-[18rem] 2xl:left-[32.5rem]">
+      <div className="absolute top-2 md:top-32 lg:top-24 left-0 md:left-[8.3rem] xl:left-[18rem] 2xl:left-[32.5rem] pb-20">
         {/* Modal rendering condition */}
         {isModalOpen && selectedService && (
             <Modal
