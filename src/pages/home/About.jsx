@@ -33,13 +33,11 @@ const About = () => {
 
   return (
     <Element name="about" className="relative h-screen overflow-hidden">
-      <div className="fixed inset-0 z-[-1]">
-        <img
-          src="/images/dental-office.jpg"
-          alt="Background"
-          className="min-w-full min-h-screen object-cover filter brightness-75"
-        />
+      <div className="fixed inset-0 z-[-1] bg-[url('/images/dental-office.jpg')]  
+        bg-auto bg-fixed bg-center md:bg-contain">
+        {/* Empty div for background image */}
       </div>
+
       <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.55] 
           text-white3">
         
@@ -55,7 +53,7 @@ const About = () => {
 
 
         <div className="flex flex-col justify-center items-center">
-          <h2 className='text-center text-white3 text-3xl md:text-5xl  xl:text-6xl font-bold
+          <h2 className='text-center text-white3 text-3xl md:text-5xl xl:text-6xl font-bold
             w-2/3 lg:w-2/4 xl:w-2/4 2xl:w-3/5'>
             Welcome to
             <span className='text-azure' style={{ margin: ' 0 1rem' }}>

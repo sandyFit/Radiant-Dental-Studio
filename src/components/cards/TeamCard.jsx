@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const TeamCards1 = ({ imgSrc, name, title, onClick }) => {
+const TeamCard = ({ imgSrc, name, title, onClick }) => {
 
     const [isClicked, setIsClicked] = useState(false);
 
@@ -11,7 +11,7 @@ const TeamCards1 = ({ imgSrc, name, title, onClick }) => {
 
 
     return (
-        <article className='relative'>
+        <article className='relative hidden lg:flex'>
             <div className={`absolute inset-0 bg-azure blur-lg ${
                     isClicked ? 'opacity-100' : 'opacity-0'
                 }`}                
@@ -19,8 +19,8 @@ const TeamCards1 = ({ imgSrc, name, title, onClick }) => {
 
             </div>
 
-            <div className={`w-64 h-64 bg-fairBlue hover:bg-oceanBlue border-2 border-azure flex flex-col
-                justify-center items-center mx-1 my-1 cursor-pointer relative ${
+            <div className={`w-64 h-64 bg-fairBlue hover:bg-oceanBlue border-2 
+                border-azure flex flex-col justify-center items-center mx-1 my-1 cursor-pointer relative ${
                     isClicked ? 'z-20' : 'z-10'
                 }`}
                 onClick={handleCardClick}
@@ -41,4 +41,4 @@ const TeamCards1 = ({ imgSrc, name, title, onClick }) => {
     )
 }
 
-export default TeamCards1;
+export default TeamCard;
