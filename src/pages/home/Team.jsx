@@ -1,18 +1,42 @@
 import TeamCard from '../../components/cards/TeamCard';
 import TeamBigCard from '../../components/cards/TeamBigCard';
-import teamData from '../../components/data/teamData.json';
-import { useState } from 'react';
+import bioData from '../../components/data/bioData.json';
+import staffData from '../../components/data/staffData.json';
+import { useEffect, useState } from 'react';
 import TeamMobileCard from '../../components/cards/TeamMobileCard';
 
 const Team = () => {
   // Extract the team leader's data (assuming it's the first element in teamData)
-  const [selectedTeamMember, setSelectedTeamMember] = useState(teamData[0]);
+  const [selectedTeamMember, setSelectedTeamMember] = useState(bioData[0]);
+  const [openMobileModal, setOpenMobileModal] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1280);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth <= 1280;
+      setIsMobile(mobile);
+
+      if (!mobile) setOpenMobileModal(false);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+
+  }, [])
+
+  // This function now only updates the selected member
   const handleClick = (id) => {
-    // Find the selected team member by id (you might want to adjust this based on your actual data structure)
-    const selectedMember = teamData.find(member => member.id === id);
+    const selectedMember = bioData.find(member => member.id === id);
+    console.log("Selected Member:", selectedMember);
     setSelectedTeamMember(selectedMember);
+
+    // For mobile, also open the modal
+    if (isMobile) {
+      console.log("open modal in mobile");
+      setOpenMobileModal(true);
+    }
   }
+
 
   return (
     <div className='relative flex flex-col justify-center items-center bg-spaceCadet bg-opacity-[.60] h-[80rem]'>
@@ -28,47 +52,32 @@ const Team = () => {
         </div> 
 
         <div className='bg-fairBlue w-0 lg:w-[75rem] h-[44rem] rounded-[50px] relative z-1 mt-12 mr-[18rem]'>
-          <div className='flex flex-wrap w-[16rem] lg:w-[55rem] lg:relative lg:left-24 top-[5.5rem] z-10'>
-            <TeamMobileCard
-              imgSrc='/images/doc1.jpeg'
-              name='Nathan Roberts'
-              title='Dental Therapist'
-              onClick={() => handleClick(2)}
-            />
-            <TeamMobileCard
-              imgSrc='/images/doc7.jpeg'
-              name='Joseph Gale'
-              title='Dental Hygienist'
-              onClick={() => handleClick(3)}
-            />
-            <TeamMobileCard
-              imgSrc='/images/doc2.png'
-              name='Gabrielle Dawson'
-              title='Dental Assistant'
-              onClick={() => handleClick(4)}
-            />
-            <TeamMobileCard
-              imgSrc='/images/doc4.jpeg'
-              name='Karim Asouza'
-              title='Dental Therapist'
-              onClick={() => handleClick(5)}
-            />
-            <TeamMobileCard
-              imgSrc='/images/doc8.jpeg'
-              name='Judy Woods'
-              title='Dental Hygienist'
-              onClick={() => handleClick(6)}
-            />
-            <TeamMobileCard
-              imgSrc='/images/doc5.jpeg'
-              name='Daniela Alvarado'
-              title='Dental Assistant'
-              onClick={() => handleClick(7)}
-            />
+          <div className='hidden lg:flex flex-wrap w-[55rem] relative left-24 top-[5.5rem] z-10'>
+            {staffData.map(member => {
+              return (
+                <TeamCard key={member.id} {...member}
+                  onClick={() => handleClick(member.id)} />
+              );
+            })}
+
           </div>
 
-          <div className="hidden">
-            <TeamBigCard {...selectedTeamMember} />
+          {/* Mobile */}
+          <div className='lg:hidden flex flex-wrap w-[16rem] top-[5.5rem] z-10'>
+            {staffData.map((member) => (
+              <TeamMobileCard key={member.id} {...member}
+                onClick={() => handleClick(member.id)}/>
+            ))}
+          </div>
+
+          <div className="">
+            {/* Render TeamBigCard and manage visibility through state */}
+            {/* Conditionally render TeamBigCard for mobile based on openMobileModal */}
+            {/* For desktop, it's always rendered but uses CSS for responsiveness */}
+            <TeamBigCard {...selectedTeamMember}
+              isOpen={isMobile ? openMobileModal : true}
+              onClose={() => setOpenMobileModal(false)}
+            />
           </div>
         </div>
       </div>

@@ -72,9 +72,11 @@
     }
 
     @media (max-width: 768px) {
-    .custom-bg {
-      background-position: top center;
+        .custom-bg {
+            background-position: top center;
+        }
     }
-  }
+
+    
 
 }

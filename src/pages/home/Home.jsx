@@ -2,9 +2,10 @@ import React from 'react'
 import Hero from './Hero'
 import Services from './Services'
 import About from './About'
-import Team from './Team'
+// import TeamMobile from '../../components/ui/TeamMobile'
 import Faq from './Faq'
 import Reviews from './Reviews'
+import Team from './Team'
 
 
 const Home = () => {

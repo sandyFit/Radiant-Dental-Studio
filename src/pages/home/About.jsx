@@ -41,7 +41,7 @@ const About = () => {
       <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.55] 
           text-white3">
         
-        <div className={`hidden lg:block fixed right-12 lg:right-36 bottom-12 z-[2000] 
+        <div className={`hidden lg:block fixed right-12 lg:right-36 bottom-12 z-50 
             ${showFloatingBtn ? '' : 'invisible'}`}>
           <button
             type='button'

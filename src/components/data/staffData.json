@@ -1,0 +1,38 @@
+[
+    {
+        "id": 2,
+        "imgSrc": "/images/doc1.jpeg",
+        "name": "Nathan Roberts",
+        "title": "Dental Therapist"
+    },
+    {
+        "id": 3,
+        "imgSrc": "/images/doc7.jpeg",
+        "name": "Joseph Gale",
+        "title": "Dental Hygienist"
+    },
+    {
+        "id": 4,
+        "imgSrc": "/images/doc2.png",
+        "name": "Gabrielle Dawson",
+        "title": "Dental Assistant"
+    },
+    {
+        "id": 5,
+        "imgSrc": "/images/doc4.jpeg",
+        "name": "Karim Asouza",
+        "title": "Dental Therapist"
+    },
+    {
+        "id": 6,
+        "imgSrc": "/images/doc8.jpeg",
+        "name": "Judy Woods",
+        "title": "Dental Hygienist"
+    },
+    {
+        "id": 7,
+        "imgSrc": "/images/doc5.jpeg",
+        "name": "Daniela Alvarado",
+        "title": "Dental Assistant"
+    }
+]
