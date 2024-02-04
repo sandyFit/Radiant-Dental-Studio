@@ -33,10 +33,11 @@ const About = () => {
 
   return (
     <Element name="about" className="relative h-screen overflow-hidden">
-      <div className="fixed inset-0 z-[-1] bg-[url('/images/dental-office.jpg')]  
-        bg-auto bg-fixed bg-center md:bg-contain">
+      <div className="fixed inset-0 z-[-1] lg:bg-[url('/images/dental-office-large.jpg')] w-full h-full 
+        bg-fixed bg-cover bg-no-repeat bg-center">
         {/* Empty div for background image */}
       </div>
+
 
       <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.55] 
           text-white3">

@@ -71,12 +71,4 @@
         @apply px-12 py-8
     }
 
-    @media (max-width: 768px) {
-        .custom-bg {
-            background-position: top center;
-        }
-    }
-
-    
-
 }
