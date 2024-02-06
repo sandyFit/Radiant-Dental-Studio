@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { Element, animateScroll as scroll, scroller } from 'react-scroll';
 
 const About = () => {
   const [showFloatingBtn, setShowFloatingBtn] = useState(false);
+  const navigate = useNavigate();
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
@@ -17,8 +19,9 @@ const About = () => {
     }
   };
 
-  const scrollToTop = () => {
-    scroll.scrollToTop();
+  const handleClick = () => {
+    return <Navigate to='/login' />
+    
   };
 
   useEffect(() => {
@@ -47,7 +50,7 @@ const About = () => {
           <button
             type='button'
             className='filled-btn px-10 py-4 '
-            onClick={scrollToTop}>
+            onClick={handleClick}>
             Book online
           </button>
         </div>

@@ -1,6 +1,12 @@
 import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('login');
+  }
 
 
   return (
@@ -25,7 +31,10 @@ const Hero = () => {
           is committed to providing you with top-notch dental care.
         </p>
 
-        <button className='filled-btn p-5 w-72'>
+        <button
+          className='filled-btn p-5 w-72'
+          onClick={handleClick}
+        >
           Book online
         </button>
       </div>
