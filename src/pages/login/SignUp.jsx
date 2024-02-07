@@ -1,11 +1,12 @@
 import React from 'react'
-import LoginNavbar from '../../layouts/LoginNavbar'
+import BookingNavbar from '../../layouts/BookingNavbar'
+import Footer from '../../layouts/Footer'
 
 const SignUp = () => {
     return (
         <main>
-            <LoginNavbar/>
-            <div className="flex flex-col justify-center items-center">
+            <BookingNavbar/>
+            <div className="flex flex-col justify-center items-center mb-16">
                 <div className="flex flex-col justify-center items-start w-[60%] h-auto border-t-0 border-2 
                     border-slate-300 rounded-b-md p-16 pb-36">    
 
@@ -24,7 +25,7 @@ const SignUp = () => {
                             <div className="flex flex-col">
                                 <label
                                     htmlFor="name"
-                                    className='font-semibold'
+                                    className='text-lg font-semibold'
                                 >
                                     Patient Full Name
                                 </label>
@@ -37,7 +38,7 @@ const SignUp = () => {
                             <div className="flex flex-col">
                                 <label
                                     htmlFor="age"
-                                    className='font-semibold'
+                                    className='text-lg font-semibold'
                                 >
                                     Patient Birth Date (mm/dd/yyyy)
                                 </label>
@@ -52,7 +53,7 @@ const SignUp = () => {
                             <div className="flex flex-col">
                                 <label
                                     htmlFor="email"
-                                    className='font-semibold'
+                                    className='text-lg font-semibold'
                                 >
                                     Email
                                 </label>
@@ -67,7 +68,7 @@ const SignUp = () => {
                             <div className="flex flex-col">
                                 <label
                                     htmlFor="text"
-                                    className='font-semibold'
+                                    className='text-lg'
                                 >
                                     Phone Number
                                 </label>
@@ -83,7 +84,7 @@ const SignUp = () => {
                         <div className="flex flex-col">
                             <label
                                 htmlFor="message"
-                                className='font-semibold'
+                                className='text-lg font-semibold'
                             >
                                 Do you have any special considerations?
                             </label>
@@ -106,6 +107,7 @@ const SignUp = () => {
                         
                 </div>
             </div>
+            <Footer/>
         </main>
     )
 }

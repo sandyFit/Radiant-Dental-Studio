@@ -20,7 +20,7 @@ const About = () => {
   };
 
   const handleClick = () => {
-    navigate('sign-up');
+    navigate('book');
     
   };
 

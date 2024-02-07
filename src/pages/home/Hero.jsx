@@ -5,13 +5,13 @@ const Hero = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('sign-up')
+    navigate('book')
   }
 
 
   return (
     <section className='bg-spaceCadet flex lg:justify-start 2xl:justify-around relative'
-      style={{ minHeight: `calc(100vh - 180px)` }}>
+      style={{ minHeight: `calc(100vh - 170px)` }}>
       
       <div className='flex flex-col w-1/3 space-y-12 pt-[7rem] md:pt-[10rem] xl:pt-[12rem] 
         pl-12 md:pl-[6rem] lg:pl-[10rem] 2xl:pl-12'>

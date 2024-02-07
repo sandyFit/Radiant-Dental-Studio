@@ -14,7 +14,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='bg-spaceCadet py-12 '>
+    <nav className='bg-spaceCadet py-12 h-[170px]'>
       <div className="flex items-center justify-between mx-8 md:mx-24 lg:mx-36 xl:mx-44">
 
         <div className='flex space-x-2'>

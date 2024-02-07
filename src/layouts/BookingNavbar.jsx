@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const LoginNavbar = () => {
+const BookingNavbar = () => {
     return (
         
-        <nav className='bg-spaceCadet py-12'>
+        <nav className='bg-spaceCadet py-12 h-[150px]'>
             <div className="flex items-center justify-between mx-8 md:mx-24 lg:mx-36 xl:mx-44">
                 <Link to="/" className="flex flex-row items-center space-x-2">
                     <img src="./logo.png" alt="Radiant's logo" className='h-16' />
@@ -32,4 +32,4 @@ const LoginNavbar = () => {
     )
 }
 
-export default LoginNavbar;
+export default BookingNavbar;
