@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Element, animateScroll as scroll, scroller } from 'react-scroll';
 
 const About = () => {
@@ -20,7 +20,7 @@ const About = () => {
   };
 
   const handleClick = () => {
-    return <Navigate to='/login' />
+    navigate('sign-up');
     
   };
 

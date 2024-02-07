@@ -71,4 +71,8 @@
         @apply px-12 py-8
     }
 
+    .input {
+        @apply border-2 border-slate-300 p-2
+    }
+
 }

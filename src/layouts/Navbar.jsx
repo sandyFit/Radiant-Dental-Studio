@@ -2,10 +2,16 @@
 import React from 'react';
 import Submenu from '../components/ui/Submenu';
 import MainMenu from '../components/ui/MainMenu';
-import Test from '../components/ui/Test';
+import { useNavigate } from 'react-router-dom';
+
 
 const Navbar = () => {
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('sign-up');
+  }
 
   return (
     <nav className='bg-spaceCadet py-12 '>
@@ -24,7 +30,10 @@ const Navbar = () => {
            <MainMenu/>  
         </div>
 
-        <button className='hidden 2xl:block transparent-btn hover:text-white hover:bg-azure px-10 py-4 ml-5'>
+        <button
+          className='hidden 2xl:block transparent-btn hover:text-white hover:bg-azure px-10 py-4 ml-5'
+          onClick={handleClick}
+        >
           book online
         </button>
 
