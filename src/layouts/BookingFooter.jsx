@@ -5,8 +5,8 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 const BookingFooter = () => {
     return (
         <article className='w-full flex flex-col items-center'>
-            <div className="flex gap-36">
-                <ul className="flex gap-24 mb-4 list-disc text-lg text-spaceCadet">
+            <div className="flex gap-48">
+                <ul className="flex gap-24 mb-4 text-lg text-spaceCadet font-semibold">
                     <li>Terms of Use</li>
                     <li>Privacy Policy</li>                
                 </ul>
@@ -35,4 +35,4 @@ const BookingFooter = () => {
     )
 }
 
-export default BookingFooter
+export default BookingFooter;

@@ -7,6 +7,9 @@ import Home from './pages/home/Home.jsx'
 // import Login from './pages/login/Login.jsx'
 import SignUp from './pages/login/SignUp.jsx'
 import BookOnline from './pages/boking/BookONline.jsx'
+import NewPatientAppointment from './pages/boking/NewPatientAppointment.jsx'
+import ExistingPatientAppointment from './pages/boking/ExistingPatientAppointment.jsx'
+import EmergencyAppointment from './pages/boking/EmergencyAppointment.jsx'
 
 
 
@@ -20,6 +23,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 				</Route>
 
 				<Route path='/book' element={<BookOnline/>} />
+				<Route path='/new-patient-appointment' element={<NewPatientAppointment/>} />
+				<Route path='/existing-patient-appointment' element={<ExistingPatientAppointment/>} />
+				<Route path='/emergency-appointment' element={<EmergencyAppointment/>} />
 				<Route path='/sign-up' element={<SignUp/>} />
 			</Routes>
 		</Router>

@@ -1,8 +1,12 @@
 import React from 'react'
 import BookingNavbar from '../../layouts/BookingNavbar';
 import BookingFooter from '../../layouts/BookingFooter';
+import { useNavigate } from 'react-router-dom';
 
 const BookOnline = () => {
+    const navigate = useNavigate();
+
+
     return (
         <main className='flex flex-col min-h-screen'>
             <BookingNavbar />
@@ -14,9 +18,21 @@ const BookOnline = () => {
                             What Type of Appointment Would You Like to Schedule?
                         </h2>
                         <div className="space-y-4 mt-4">
-                            <button className="booking-btn">New Patient</button>
-                            <button className="booking-btn">Existing Patient</button>
-                            <button className="booking-btn">Emergency/Toothache</button>
+                            <button className="booking-btn"
+                                onClick={() => navigate('/new-patient-appointment')}
+                            >
+                                New Patient
+                            </button>
+                            <button className="booking-btn"
+                                onClick={() => navigate('/existing-patient-appointment')}
+                            >
+                                Existing Patient
+                            </button>
+                            <button className="booking-btn"
+                                onClick={() => navigate('/emergency')}
+                            >
+                                Emergency/Toothache
+                            </button>
                         </div>
                     </div>
 
