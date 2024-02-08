@@ -8,8 +8,8 @@ const SmallAvatars = ({imgSrc, title, name}) => {
                     <img src={imgSrc} alt={name} className='avatar-img-sm'/>
                 </div>
                 <div className="flex flex-col">
+                    <h3 className='text-2xl font-semibold '>{name}</h3> 
                     <h4 className='text-slate-500'>{title.toUpperCase()}</h4>
-                    <h3 className='text-xl font-semibold '>{name}</h3> 
                 </div>
             </div>
 

@@ -2,17 +2,20 @@ import React, {useState} from 'react'
 import BookingNavbar from '../../layouts/BookingNavbar';
 import BookingFooter from '../../layouts/BookingFooter';
 
-import { CalendarMonth } from '@mui/icons-material';
+import { ArrowBack, CalendarMonth } from '@mui/icons-material';
 import BookingCalendar from '../../components/ui/BookingCalendar';
 import BookingContactCard from '../../components/cards/BookingContactCard';
 import staffData from '../../components/data/staffData.json';
 import SmallAvatars from '../../components/ui/SmallAvatars';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const NewPatientAppoinment = () => {
     
     const [openCalendar, setOpenCalendar] = useState(false);
     const [selectedAppointment, setSelectedAppointment] = useState('');
+    const navigate = useNavigate();
 
     const handleCalendar = () => {
         setOpenCalendar(!openCalendar)
@@ -28,7 +31,12 @@ const NewPatientAppoinment = () => {
             <section className='flex flex-grow justify-between overflow-hidden'>
                 <article className='w-3/4 flex flex-col overflow-y-auto max-h-screen '>
                     {/* Adjusted Content Section for Centering */}
-                    <div className="flex-1 flex flex-col justify-center px-36 py-24">
+                    <div className="flex-1 flex flex-col justify-center relative px-36 py-28">
+                        <button className="absolute top-8 text-lg font-medium text-blue-400"
+                            onClick={() => navigate(-1)} 
+                        >
+                            <ArrowBack/> Back
+                        </button>
                         <div className="flex justify-between w-full relative mb-4">
                             <h2 className='text-spaceCadet text-xl md:text-3xl xl:text-4xl font-bold text-left w-[65%]'>
                                 Select an Appointment
