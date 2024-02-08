@@ -1,12 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import BookingNavbar from '../../layouts/BookingNavbar';
 import BookingFooter from '../../layouts/BookingFooter';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import { CalendarMonth } from '@mui/icons-material';
+import BookingCalendar from '../../components/ui/BookingCalendar';
+
 
 const NewPatientAppoinment = () => {
+    
+    const [openCalendar, setOpenCalendar] = useState(false);
+
+    const handleCalendar = () => {
+        setOpenCalendar(!openCalendar)
+    }
+
     return (
         <main className='flex flex-col min-w-screen h-screen overflow-hidden'>
             <BookingNavbar />
@@ -14,7 +23,7 @@ const NewPatientAppoinment = () => {
                 <article className='w-3/4 flex flex-col overflow-y-auto max-h-screen mt-24'>
                     {/* Adjusted Content Section for Centering */}
                     <div className="flex-1 flex flex-col justify-center px-36 py-6">
-                        <div className="flex justify-between w-full">
+                        <div className="flex justify-between w-full relative">
                             <h2 className='text-spaceCadet text-xl md:text-3xl xl:text-4xl font-bold text-left w-[65%]'>
                                 Select an Appointment
                             </h2>
@@ -27,6 +36,12 @@ const NewPatientAppoinment = () => {
                                 <option value="existing">Existing Patient</option>
                                 <option value="emergency">Emergency</option>
                             </select>
+                        </div>
+
+                        <div className="absolute bottom-6">
+                            {openCalendar && (
+                                <BookingCalendar />
+                            )}
                         </div>
 
                         <hr className='border-t-2 border-slate-300 w-[100%] my-6' />
@@ -60,7 +75,9 @@ const NewPatientAppoinment = () => {
                         
                         
                         <div className="flex">                            
-                            <button class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md 
+                            <button
+                                onClick={handleCalendar}
+                                class="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md 
                                 bg-spanishBlue px-12 text-xl uppercase font-semibold text-neutral-50">
                                 <span class="absolute h-0 w-0 bg-blue-500 
                                     transition-all duration-300 group-hover:h-full group-hover:w-full"></span>
