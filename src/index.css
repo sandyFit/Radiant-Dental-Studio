@@ -82,11 +82,11 @@
     }
 
     .avatar-sm {
-        @apply w-36 h-36 bg-fairBlue hover:bg-oceanBlue border-2 border-spanishBlue rounded-full
+        @apply w-24 h-24 bg-fairBlue hover:bg-oceanBlue border-2 border-spanishBlue rounded-full
             flex flex-col justify-center items-center mx-1 my-1 cursor-pointer
     }
 
     .avatar-img-sm {
-        @apply w-36 rounded-full border-2 border-spanishBlue
+        @apply w-24 rounded-full border-2 border-spanishBlue
     }
 }
