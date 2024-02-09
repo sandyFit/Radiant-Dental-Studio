@@ -1,14 +1,16 @@
 import React, {useState} from 'react'
 import BookingNavbar from '../../layouts/BookingNavbar';
 import BookingFooter from '../../layouts/BookingFooter';
-
+import 'react-calendar/dist/Calendar.css'; // Import the calendar CSS
 import { ArrowBack, CalendarMonth } from '@mui/icons-material';
-import BookingCalendar from '../../components/ui/BookingCalendar';
 import BookingContactCard from '../../components/cards/BookingContactCard';
 import staffData from '../../components/data/staffData.json';
 import SmallAvatars from '../../components/ui/SmallAvatars';
 import { useNavigate } from 'react-router-dom';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
+import BookingCalendar from '../../components/ui/BookingCalendar';
 
 
 const NewPatientAppoinment = () => {
@@ -18,7 +20,9 @@ const NewPatientAppoinment = () => {
     const navigate = useNavigate();
 
     const handleCalendar = () => {
-        setOpenCalendar(!openCalendar)
+        console.log('clicked')
+        setOpenCalendar(!openCalendar);
+        console.log('calendar open')
     }
 
     const handleAppointmentChange = (e) => {
@@ -37,7 +41,7 @@ const NewPatientAppoinment = () => {
                         >
                             <ArrowBack/> Back
                         </button>
-                        <div className="flex justify-between w-full relative mb-4">
+                        <div className="flex justify-between w-full mb-4">
                             <h2 className='text-spaceCadet text-xl md:text-3xl xl:text-4xl font-bold text-left w-[65%]'>
                                 Select an Appointment
                             </h2>
@@ -71,14 +75,21 @@ const NewPatientAppoinment = () => {
                                     transition-all duration-300 group-hover:h-full group-hover:w-full"></span>
                                 <span className="relative">Select Date <CalendarMonth/></span>
                             </button>
-                        </div>
-
-                        <div className="absolute bottom-6">
+                        </div>                                                   
+                            
+                        <div className="absolute bottom-[28.5rem] z-50">
                             {openCalendar && (
-                                <BookingCalendar />
+                                        <Calendar
+                                    onChange={handleAppointmentChange} // Corrected props for handling date change
+                                    value={selectedAppointment} // Controlled component for selected date
+                                />
                             )}
+                        
                         </div>
+                        
 
+                        <BookingCalendar/>
+                        
                         {/* <hr className='border-t-2 border-slate-300 w-[100%] my-6' /> */}
                         
                         {staffData.filter(member => member.title !== 'Dental Assistant')
