@@ -13,7 +13,7 @@ const BookOnline = () => {
             <section className='flex flex-grow overflow-hidden'>
                 {/* Left Article: Scrollable Content */}
                 <article className='w-3/4 overflow-auto'>
-                    <div className="flex flex-col justify-center relative px-36 mt-12 pb-28">
+                    <div className="flex flex-col justify-center relative px-36 mt-12 pb-[8rem]">
                         <hr className='border-t-2 border-slate-300 w-full my-6' />
                         <div> {/* This is the parent flex container */}
                             <BookingContactCard />
