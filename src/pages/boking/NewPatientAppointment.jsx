@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
 import BookingNavbar from '../../layouts/BookingNavbar';
-import BookingFooter from '../../layouts/BookingFooter';
+import Footer from '../../layouts/Footer';
 import 'react-calendar/dist/Calendar.css'; // Import the calendar CSS
 import { ArrowBack, CalendarMonth } from '@mui/icons-material';
-import BookingContactCard from '../../components/cards/BookingContactCard';
 import staffData from '../../components/data/staffData.json';
 import SmallAvatars from '../../components/ui/SmallAvatars';
 import { useNavigate } from 'react-router-dom';
@@ -105,13 +104,10 @@ const NewPatientAppoinment = () => {
 
                     {/* Footer Section */}
                     <div className="">
-                        <BookingFooter/>
+                        <Footer/>
                     </div>
                 </article>
 
-                {/* <article className='overflow-hidden'> 
-                    <img src="/map.jpg" alt="Radiant Google Map" className='w-full h-screen object-cover' />
-                </article> */}
             </section>
         </main>
     );
