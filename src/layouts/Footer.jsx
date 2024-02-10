@@ -40,22 +40,24 @@ const Footer = () => {
                                 <NewsletterInput/>
                             </div>
                         </div>
-                        <div className="flex justify-around mt-16 text-spanishBlue list-none text-lg w-full">
+                        <div className="flex justify-evenly gap-[10rem] ml-[16rem] mt-16 text-spanishBlue list-none text-lg w-2/5">
                             <li>TERMS OF USE</li>
                             <li>PRIVACY POLICY</li>
-                            <button onClick={scrollToTop}>
-                                <ArrowUpward />TOP
-                            </button>
+                            
                         </div>
                     </div>
                 </div>
 
         
-                <div className='absolute inset-0 top-[35rem] w-full h-16 bg-midnight flex items-center justify-center 
-                    text-center'>
+                <div className='absolute inset-0 top-[35rem] w-full h-16 bg-midnight flex items-center justify-end 
+                    text-center gap-[24rem]'>
                     <p className="text-lg font-light text-white3">
                         © 2024 Design & Development by Trish Ramos. All rights reserved. 
                     </p>
+                    <button className='text-spanishBlue mr-16' onClick={scrollToTop}>
+                        <ArrowUpward />TOP
+                    </button>
+
                 </div>
 
             </article>

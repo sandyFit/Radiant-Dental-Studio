@@ -14,7 +14,7 @@ const BookingFooter = () => {
             <div className="bg-spanishBlue w-full h-3 mt-6"></div>
 
             <div className="bg-spaceCadet flex flex-col items-center w-full h-auto py-6 px-24">
-
+in main
                 <div className='flex justify-evenly w-1/2 text-slate-200 m-6'>
                 <InstagramIcon 
                     style={{ fontSize: '2rem',  cursor: 'pointer', transition: 'opacity 0.3s' }}
