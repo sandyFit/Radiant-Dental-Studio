@@ -1,7 +1,7 @@
 
 const NewsletterInput = () => {
     return (
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center w-[18rem]'>
             <input
                 type="email"
                 id="email"

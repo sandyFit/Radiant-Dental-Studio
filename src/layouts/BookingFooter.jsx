@@ -34,7 +34,7 @@ const BookingFooter = () => {
                 </div>
                 
                 <div className="flex justify-center items-center">
-                    <p className="text-lg font-semibold text-white3">
+                    <p className="text-lg font-light text-white3">
                         © 2024 Design & Development by Trish Ramos. All rights reserved. 
                     </p>
                 </div>           
