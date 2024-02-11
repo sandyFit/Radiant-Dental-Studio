@@ -22,7 +22,7 @@ const NewsletterInput = () => {
             <p className='text-spanishBlue font-medium text-regular text-[.8rm]'>
                 Occasionally we send newsletters containing practice news. If you'd like to receive this
                 information, sign up to our email above. We take your privacy seriously and ensure that
-                your information will not be passed on to anyone.
+                your information is safe.
             </p>
 
             

@@ -2,15 +2,11 @@ import WorkingHrsTable from '../components/forms/WorkingHrsTable';
 import NewsletterInput from '../components/forms/NewsletterInput';
 import ContactCard from '../components/cards/ContactCard';
 import MobileFooter from './MobileFooter';
-import { ArrowUpward } from '@mui/icons-material';
-import { animateScroll as scroll } from 'react-scroll';
+
 
 
 const Footer = () => {
 
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    }
 
     return (
         <section className='bg-spaceCadet h-[50rem] lg:h-[35rem]'>
@@ -40,24 +36,35 @@ const Footer = () => {
                                 <NewsletterInput/>
                             </div>
                         </div>
-                        <div className="flex justify-evenly gap-[10rem] ml-[16rem] mt-16 text-spanishBlue list-none text-lg w-2/5">
+                        <div className="flex justify-evenly gap-[10rem] mt-[5.5rem] text-spanishBlue 
+                            list-none text-lg w-full">
                             <li>TERMS OF USE</li>
                             <li>PRIVACY POLICY</li>
                             
+                            
                         </div>
                     </div>
+                    
+
                 </div>
 
-        
+                
                 <div className='absolute inset-0 top-[35rem] w-full h-16 bg-midnight flex items-center justify-end 
-                    text-center gap-[24rem]'>
-                    <p className="text-lg font-light text-white3">
+                    text-center'>
+                    <p className="text-lg font-light text-white3 mr-[35rem]">
                         © 2024 Design & Development by Trish Ramos. All rights reserved. 
                     </p>
-                    <button className='text-spanishBlue mr-16' onClick={scrollToTop}>
+                    {/* <button className='text-spanishBlue mr-16' onClick={scrollToTop}>
                         <ArrowUpward />TOP
-                    </button>
-
+                    </button> */}
+                    
+                    {/* <button onClick={scrollToTop}
+                        class="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden 
+                        rounded-full bg-slate-600 bottom-16 right-16">
+                        <div class="transition duration-300 group-hover:rotate-[360deg] text-spanishBlue">
+                            <ArrowUpward />
+                        </div>
+                    </button> */}
                 </div>
 
             </article>

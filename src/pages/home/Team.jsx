@@ -44,7 +44,7 @@ const Team = () => {
         <div >
           <h2 className='text-white3 text-3xl md:text-5xl xl:text-5xl font-bold w-2/3 lg:w-2/4 xl:w-full'>
             Quality
-            <span className='text-azure' style={{ margin: ' 0 1rem' }}>
+            <span className='text-midnight' style={{ margin: ' 0 1rem' }}>
               Dental Care
             </span>         
             at Your Fingerprints
@@ -63,7 +63,7 @@ const Team = () => {
           </div>
 
           {/* Mobile */}
-          <div className='lg:hidden flex flex-wrap w-[16rem] top-[5.5rem] z-10'>
+          <div className='lg:hidden flex flex-wrap w-[16rem] top-[5.5rem] z-1'>
             {staffData.map((member) => (
               <TeamMobileCard key={member.id} {...member}
                 onClick={() => handleClick(member.id)}/>

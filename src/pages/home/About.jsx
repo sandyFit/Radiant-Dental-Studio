@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Element, animateScroll as scroll, scroller } from 'react-scroll';
+import { ArrowUpward } from '@mui/icons-material';
 
 const About = () => {
   const [showFloatingBtn, setShowFloatingBtn] = useState(false);
@@ -24,6 +25,10 @@ const About = () => {
     
   };
 
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  }
+
   useEffect(() => {
     // Add event listener when the component mounts
     window.addEventListener('scroll', handleScroll);
@@ -45,22 +50,31 @@ const About = () => {
       <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.55] 
           text-white3">
         
-        <div className={`hidden lg:block fixed right-12 lg:right-36 bottom-12 z-50 
-            ${showFloatingBtn ? '' : 'invisible'}`}>
-          <button
-            type='button'
-            className='filled-btn px-10 py-4 '
-            onClick={handleClick}>
-            Book online
-          </button>
-        </div>
+        {/* Fixed Book Online Button */}
+      <div className={`fixed right-48 bottom-[115px] z-50 ${showFloatingBtn ? '' : 'invisible'}`}>
+        <button
+          type='button'
+          className='filled-btn px-10 py-4'
+          onClick={handleClick}>
+          Book online
+        </button>
+      </div>
+
+      {/* Fixed ArrowTop Button */}
+        <button onClick={scrollToTop}
+          className={`fixed left-[108rem] bottom-[115px] group inline-flex h-12 w-12 items-center justify-center overflow-hidden 
+                        rounded-full bg-slate-600 ${showFloatingBtn ? '' : 'invisible'}`}>
+                        <div class="transition duration-300 group-hover:rotate-[360deg] text-spanishBlue">
+                            <ArrowUpward />
+                        </div>
+                    </button>
 
 
         <div className="flex flex-col justify-center items-center">
           <h2 className='text-center text-white3 text-3xl md:text-5xl xl:text-6xl font-bold
             w-2/3 lg:w-2/4 xl:w-2/4 2xl:w-3/5'>
             Welcome to
-            <span className='text-azure' style={{ margin: ' 0 1rem' }}>
+            <span className='text-midnight' style={{ margin: ' 0 1rem' }}>
               Radiant 
             </span>         
             Dental Studio
