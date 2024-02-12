@@ -10,7 +10,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('sign-up');
+    navigate('book-appointment');
   }
 
   return (

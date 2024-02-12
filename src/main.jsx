@@ -5,13 +5,12 @@ import './index.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home.jsx'
 // import Login from './pages/login/Login.jsx'
-import SignUp from './pages/login/SignUp.jsx'
-import BookOnline from './pages/boking/BookOnline.jsx'
-import NewPatientAppointment from './pages/boking/NewPatientAppointment.jsx'
-import ExistingPatientAppointment from './pages/boking/ExistingPatientAppointment.jsx'
-import EmergencyAppointment from './pages/boking/EmergencyAppointment.jsx'
-
-
+//import SignUp from './pages/login/SignUp.jsx'
+import NewPatientAppointment from './pages/booking/NewPatientAppointment.jsx'
+import ExistingPatientAppointment from './pages/booking/ExistingPatientAppointment.jsx'
+import EmergencyAppointment from './pages/booking/EmergencyAppointment.jsx'
+import BookAppointment from './pages/booking/BookAppointment.jsx'
+import OnlineBooking from './pages/booking/OnlineBooking.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -22,11 +21,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 					<Route index element={<Home />} />					
 				</Route>
 
-				<Route path='/book' element={<BookOnline/>} />
+				<Route path='/book' element={<OnlineBooking/>} />
 				<Route path='/new-patient-appointment' element={<NewPatientAppointment/>} />
 				<Route path='/existing-patient-appointment' element={<ExistingPatientAppointment/>} />
 				<Route path='/emergency-appointment' element={<EmergencyAppointment/>} />
-				<Route path='/sign-up' element={<SignUp/>} />
+				<Route path='/book-appointment' element={<BookAppointment/>} />
 			</Routes>
 		</Router>
 	</React.StrictMode>

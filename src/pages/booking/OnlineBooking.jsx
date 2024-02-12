@@ -4,7 +4,7 @@ import BookingFooter from '../../layouts/BookingFooter';
 import { useNavigate } from 'react-router-dom';
 import BookingContactCard from '../../components/cards/BookingContactCard';
 
-const BookOnline = () => {
+const OnlineBooking = () => {
     const navigate = useNavigate();
 
     return (
@@ -46,4 +46,4 @@ const BookOnline = () => {
     );
 }
 
-export default BookOnline;
+export default OnlineBooking;
