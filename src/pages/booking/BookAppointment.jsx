@@ -1,6 +1,7 @@
 import React from 'react'
 import BookingNavbar from '../../layouts/BookingNavbar'
 import Footer from '../../layouts/Footer';
+import { ArrowBack } from '@mui/icons-material';
 
 const BookAppointment = () => {
     return (
@@ -9,9 +10,14 @@ const BookAppointment = () => {
             
             {/* Main content wrapper for centering */}
             <div className="flex-grow flex flex-col items-center justify-center">
-                <section className="py-24 w-3/5 space-y-12">
-                    <div className="flex flex-col ">
-                        <h3 className="text-spaceCadet text-2xl font-bold">
+                <section className="pt-12 pb-36 w-3/5 space-y-12">
+                    <button className="absolute text-lg font-medium text-blue-400"
+                            onClick={() => navigate(-1)} 
+                        >
+                        <ArrowBack /> Back
+                    </button>
+                    <div className="flex flex-col">
+                        <h3 className="text-spaceCadet text-2xl font-bold mt-6">
                             Appointment Request
                         </h3>
                         <hr className="border-t-2 border-slate-300 w-full my-6" />
@@ -72,7 +78,7 @@ const BookAppointment = () => {
 
                             {/* Submit button */}
                             <div className="flex justify-center">
-                                <button type="submit" className="filled-btn px-16 py-4 ml-[17rem]">Submit</button>
+                                <button type="submit" className="no-shadow-btn px-16 py-2.5 ml-[17rem]">Submit</button>
                             </div>
                         </form>
 

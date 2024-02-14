@@ -39,12 +39,12 @@ const Team = () => {
 
 
   return (
-    <div className='relative flex flex-col justify-center items-center bg-spaceCadet bg-opacity-[.60] h-[80rem]'>
+    <div className='relative flex flex-col justify-center items-center bg-spaceCadet bg-opacity-[.63] h-[80rem]'>
       <div className=" flex flex-col justify-center items-center">
         <div >
           <h2 className='text-white3 text-3xl md:text-5xl xl:text-5xl font-bold w-2/3 lg:w-2/4 xl:w-full'>
             Quality
-            <span className='text-midnight' style={{ margin: ' 0 1rem' }}>
+            <span className='text-spanishBlue text-shadow' style={{ margin: ' 0 1rem' }}>
               Dental Care
             </span>         
             at Your Fingerprints

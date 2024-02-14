@@ -47,14 +47,14 @@ const About = () => {
       </div>
 
 
-      <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.55] 
+      <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.63] 
           text-white3">
         
         {/* Fixed Book Online Button */}
-      <div className={`fixed right-48 bottom-[115px] z-50 ${showFloatingBtn ? '' : 'invisible'}`}>
+      <div className={`fixed right-40 bottom-[90px] z-50 ${showFloatingBtn ? '' : 'invisible'}`}>
         <button
           type='button'
-          className='filled-btn px-10 py-4'
+          className='filled-btn px-10 py-3.5'
           onClick={handleClick}>
           Book online
         </button>
@@ -62,10 +62,10 @@ const About = () => {
 
       {/* Fixed ArrowTop Button */}
         <button onClick={scrollToTop}
-          className={`fixed left-[108rem] bottom-[115px] group inline-flex h-12 w-12 items-center justify-center overflow-hidden 
-                        rounded-full bg-slate-600 ${showFloatingBtn ? '' : 'invisible'}`}>
+          className={`fixed left-[110rem] bottom-[90px] group inline-flex h-12 w-12 items-center justify-center overflow-hidden 
+                        rounded-full bg-spaceCadet border-2 border-spanishBlue ${showFloatingBtn ? '' : 'invisible'}`}>
                         <div class="transition duration-300 group-hover:rotate-[360deg] text-spanishBlue">
-                            <ArrowUpward />
+                            <ArrowUpward style={{fontSize: '2rem'}}/>
                         </div>
                     </button>
 
@@ -74,7 +74,7 @@ const About = () => {
           <h2 className='text-center text-white3 text-3xl md:text-5xl xl:text-6xl font-bold
             w-2/3 lg:w-2/4 xl:w-2/4 2xl:w-3/5'>
             Welcome to
-            <span className='text-midnight' style={{ margin: ' 0 1rem' }}>
+            <span className='text-spanishBlue text-shadow' style={{ margin: ' 0 1rem' }}>
               Radiant 
             </span>         
             Dental Studio

@@ -2,6 +2,7 @@ import WorkingHrsTable from '../components/forms/WorkingHrsTable';
 import NewsletterInput from '../components/forms/NewsletterInput';
 import ContactCard from '../components/cards/ContactCard';
 import MobileFooter from './MobileFooter';
+import { Link } from '@mui/material';
 
 
 
@@ -22,27 +23,21 @@ const Footer = () => {
           
                     <div className="flex flex-col w-full">
                         <div className="flex justify-around items-center w-full px-12">
-                            <div className='w-1/2 flex flex-col justify-center items-center mt-20'>
+                            <div className='w-1/2 flex flex-col justify-center items-center mt-[6rem]'>
                                 <h4 className='text-white3 text-center text-2xl font-semibold mb-6'>
                                 WORKING HOURS
                                 </h4>
                                 <WorkingHrsTable />                                     
                             </div>
 
-                            <div className='w-1/2 flex flex-col items-center mt-20'>
+                            <div className='w-1/2 flex flex-col items-center mt-[6rem]'>
                                 <h4 className='text-white3 text-center text-2xl font-semibold mb-6'>
                                 NEWSLETTER SIGN UP
                                 </h4>
                                 <NewsletterInput/>
                             </div>
                         </div>
-                        <div className="flex justify-evenly gap-[10rem] mt-[5.5rem] text-spanishBlue 
-                            list-none text-lg w-full">
-                            <li>TERMS OF USE</li>
-                            <li>PRIVACY POLICY</li>
-                            
-                            
-                        </div>
+                        
                     </div>
                     
 
@@ -50,21 +45,22 @@ const Footer = () => {
 
                 
                 <div className='absolute inset-0 top-[35rem] w-full h-16 bg-midnight flex items-center justify-end 
-                    text-center'>
-                    <p className="text-lg font-light text-white3 mr-[35rem]">
+                    text-center gap-[16rem]'>
+                    <p className="text-lg font-light text-blue-400 ">
                         © 2024 Design & Development by Trish Ramos. All rights reserved. 
                     </p>
-                    {/* <button className='text-spanishBlue mr-16' onClick={scrollToTop}>
-                        <ArrowUpward />TOP
-                    </button> */}
-                    
-                    {/* <button onClick={scrollToTop}
-                        class="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden 
-                        rounded-full bg-slate-600 bottom-16 right-16">
-                        <div class="transition duration-300 group-hover:rotate-[360deg] text-spanishBlue">
-                            <ArrowUpward />
-                        </div>
-                    </button> */}
+                    <div className="flex justify-evenly text-blue-400
+                        list-none text-lg w-[22%] pr-[5rem] ">
+                        <Link to='/terms' 
+                            style={{color: '#60A5FA', textDecoration: 'none'}}>
+                            Terms of Use
+                        </Link>
+                            |
+                        <Link to='/policy' 
+                            style={{color: '#60A5FA', textDecoration: 'none'}}>
+                            Privacy Policy
+                        </Link>                          
+                    </div>
                 </div>
 
             </article>

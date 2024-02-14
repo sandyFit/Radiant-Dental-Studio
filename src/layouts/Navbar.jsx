@@ -31,7 +31,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className='hidden 2xl:block transparent-btn hover:text-white hover:bg-azure px-10 py-4 ml-5'
+          className='hidden 2xl:block transparent-btn hover:text-white hover:bg-azure px-10 py-3.5 ml-5'
           onClick={handleClick}
         >
           book online

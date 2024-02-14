@@ -12,7 +12,7 @@ export default {
         spaceCadet: '#1D345D', // Petroleum blue
         azure: '#0084FF', // vibrant blue
         spanishBlue: '#53B4DE', // jade blue
-        oceanBlue: '#DCEAFF', 
+        oceanBlue: '#DCEAFF',
         greyBlue: '#7AACFA',
         whiteBlue: '#E3EDFC', // white blueish
         fairBlue: '#CDDFFA',
@@ -33,7 +33,7 @@ export default {
 
       
     },
-  },
-  plugins: [],
-}
+    plugins: [],
+  }
 
+}

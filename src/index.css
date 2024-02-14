@@ -6,7 +6,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(29, 52, 93, 0.8);
+}
 
 @layer base {
     body {
@@ -14,7 +16,7 @@
     }
 
     a {
-        @apply cursor-pointer;
+        @apply cursor-pointer no-underline;
     }
 }
 
@@ -26,8 +28,13 @@
 
 @layer utilities {
     .filled-btn {
-        @apply button text-white3 bg-azure hover:text-spanishBlue hover:bg-transparent 
-            border-transparent hover:border-2 hover:border-spanishBlue shadow-xl shadow-midnight
+        @apply button text-white3 bg-azure hover:text-spanishBlue hover:bg-transparent border-4
+            border-transparent hover:border-4 hover:border-spanishBlue shadow-xl shadow-midnight
+    }
+
+    .no-shadow-btn {
+        @apply button text-white3 bg-spanishBlue hover:text-spanishBlue hover:bg-transparent 
+            border-4 border-transparent hover:border-4 hover:border-spanishBlue 
     }
 
     .transparent-btn {
@@ -39,6 +46,8 @@
         @apply w-full p-6 bg-gray-200 hover:bg-gray-300 rounded-md cursor-pointer mt-6 text-2xl font-semibold 
             text-azure text-left
     }
+
+    
 
     .ul {
         @apply flex justify-evenly text-spanishBlue gap-2 
