@@ -64,7 +64,7 @@ const About = () => {
         <button onClick={scrollToTop}
           className={`fixed left-[110rem] bottom-[90px] group inline-flex h-12 w-12 items-center justify-center overflow-hidden 
                         rounded-full bg-spaceCadet border-2 border-spanishBlue ${showFloatingBtn ? '' : 'invisible'}`}>
-                        <div class="transition duration-300 group-hover:rotate-[360deg] text-spanishBlue">
+                        <div className="transition duration-300 group-hover:rotate-[360deg] text-spanishBlue">
                             <ArrowUpward style={{fontSize: '2rem'}}/>
                         </div>
                     </button>
