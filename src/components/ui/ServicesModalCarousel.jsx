@@ -36,11 +36,11 @@ const Modal = ({ isOpen, service = {}, onClose }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="z-50 overflow-auto bg-white3 bg-opacity-95 flex items-center justify-center 
+        <div className="z-50 overflow-auto bg-white3 bg-opacity-85 flex items-center justify-center 
             px-6 lg:px-24 py-24 relative">
             
             <button
-                className="mt-6 bg-azure text-white py-2 px-4 rounded hover:bg-blue-400 absolute 
+                className="mt-6 btn-filled-no-shadow text-white py-2 px-4 rounded hover:bg-blue-400 absolute 
                     left-[18.5rem] md:left-[38rem] lg:left-[42.5rem] top-[2rem] lg:top-[2rem]"
                     onClick={handleClose}
                 >
@@ -48,7 +48,7 @@ const Modal = ({ isOpen, service = {}, onClose }) => {
             </button>
             
             <div className="bg-fairBlue p-8 rounded-lg w-[90%] md:max-w-2xl shadow-xl 
-                shadow-slate-400 md:flex md:flex-col md:justify-center md:items-center">
+                shadow-slate-500 md:flex md:flex-col md:justify-center md:items-center">
                 <h1 className="text-xl lg:text-2xl text-azure font-bold mb-4">{service.title}</h1>
                 <p className="text-spaceCadet text-lg lg:text-xl mb-6">{service.description}</p>
 
@@ -68,14 +68,14 @@ const Modal = ({ isOpen, service = {}, onClose }) => {
                 {service.categories && service.categories.length > 1 && (
                     <div className="relative">
                         <button className='absolute top-[5rem] lg:-top-[10rem] right-[10rem] lg:right-[20rem] transform 
-                            -translate-y-1/2 text-white bg-azure w-12 h-12 rounded-full z-50'
+                            -translate-y-1/2 text-white btn-filled-no-shadow w-12 h-12 rounded-full z-50'
                             onClick={prevSlide}
                         >
                             <ChevronLeft style={{ fontSize: '3rem' }} />
                         </button>
 
                         <button className='absolute top-[5rem] lg:-top-[10rem] left-[10rem] lg:left-[20rem] transform 
-                            -translate-y-1/2 text-white bg-azure w-12 h-12 rounded-full z-50'
+                            -translate-y-1/2 text-white btn-filled-no-shadow w-12 h-12 rounded-full z-50'
                             onClick={nextSlide}
                         >
                             <ChevronRight style={{ fontSize: '3rem' }} />

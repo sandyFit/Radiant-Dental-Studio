@@ -1,20 +1,12 @@
-import StarIcon from '@mui/icons-material/Star';
+
+import Stars from '../ui/Stars';
 
 const ReviewsCard = ({name, srcImg, review}) => {
     return (
         <article className='bg-spaceCadet w-[66rem] h-auto border-8 border-spanishBlue flex flex-col justify-start 
          p-16 mt-5 space-y-4 cursor-pointer relative'>
 
-            <div className='space-x-2'>
-                    <span className='bg-spaceCadet px-4 text-spanishBlue font-bold absolute top-[-1.5rem]
-                        left-8'>
-                    {[...Array(5)].map((_, index) => (
-                        <StarIcon key={index} style={{ fontSize: '2.8rem' }} />
-                    ))}
-                    </span>
-                </div>
-
-            
+            <Stars/>
 
             <div className="flex justify-start items-center space-x-4">
                 <div >
@@ -33,12 +25,8 @@ const ReviewsCard = ({name, srcImg, review}) => {
 
             <p className='text-spanishBlue text-[1.35rem] pb-6'>
                 {review}
-            </p>
-
-
-            
+            </p>       
         </article>
-
     )
 }
 

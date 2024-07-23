@@ -11,7 +11,7 @@ const Faq = () => {
   }
 
   return (
-    <section className='relative z-1 flex flex-col justify-center items-center bg-white3 h-[85rem]'>
+    <section className='relative z-1 flex flex-col justify-center items-center bg-white3 h-auto'>
       <div>
         <h2 className='text-center text-spaceCadet text-5xl font-bold mt-12 mb-24 relative'>
           Have Questions?

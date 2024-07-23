@@ -31,7 +31,7 @@ const BookingFooter = () => {
                 
                 <div className="flex justify-between items-center w-full gap-[10rem]">
                     <p className="text-lg font-light text-blue-400 ">
-                        © 2024 Design & Development by Trish Ramos. All rights reserved. 
+                        © 2024 Design & Development by Trish Ramos.
                     </p>
                     <div className="flex justify-evenly text-blue-400
                         list-none text-lg w-[30%] ">

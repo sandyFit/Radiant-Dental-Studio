@@ -40,21 +40,24 @@ const About = () => {
   }, []);
 
   return (
-    <Element name="about" className="relative h-screen overflow-hidden">
-      <div className="fixed inset-0 z-[-1] lg:bg-[url('/images/dental-office-large.jpg')] w-full h-full 
-        bg-fixed bg-cover bg-no-repeat bg-center">
-        {/* Empty div for background image */}
-      </div>
+    <Element name="about" className="relative h-screen py-24 bg-custom-gradient-bg-inverse flex justify-center">
+      <div className="relative lg:bg-[url('/images/dental-office-large.jpg')] w-[80%] h-full 
+         bg-auto bg-no-repeat bg-center rounded-3xl">       
+      {/* Opacity Layer */}
+      <div className="absolute inset-0 bg-spaceCadet bg-opacity-[.70] rounded-3xl"></div>
+    </div>
 
 
-      <div className="relative z-10 flex items-center justify-center h-full bg-spaceCadet bg-opacity-[.63] 
+      <div className="absolute left-0 top-0 z-10 flex items-center justify-center h-full 
           text-white3">
+        
+        
         
         {/* Fixed Book Online Button */}
       <div className={`fixed right-40 bottom-[90px] z-50 ${showFloatingBtn ? '' : 'invisible'}`}>
         <button
           type='button'
-          className='filled-btn px-10 py-3.5'
+          className='btn-filled px-10 py-3.5'
           onClick={handleClick}>
           Book online
         </button>
@@ -63,11 +66,11 @@ const About = () => {
       {/* Fixed ArrowTop Button */}
         <button onClick={scrollToTop}
           className={`fixed left-[110rem] bottom-[90px] group inline-flex h-12 w-12 items-center justify-center overflow-hidden 
-                        rounded-full bg-spaceCadet border-2 border-spanishBlue ${showFloatingBtn ? '' : 'invisible'}`}>
-                        <div className="transition duration-300 group-hover:rotate-[360deg] text-spanishBlue">
-                            <ArrowUpward style={{fontSize: '2rem'}}/>
-                        </div>
-                    </button>
+            rounded-full bg-spaceCadet border-2 border-spanishBlue ${showFloatingBtn ? '' : 'invisible'}`}>
+            <div className="transition duration-300 group-hover:rotate-[360deg] text-spanishBlue">
+                <ArrowUpward style={{fontSize: '2rem'}}/>
+            </div>
+        </button>
 
 
         <div className="flex flex-col justify-center items-center">

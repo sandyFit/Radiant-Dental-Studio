@@ -10,7 +10,7 @@ const Hero = () => {
 
 
   return (
-    <section className='bg-spaceCadet flex lg:justify-start 2xl:justify-around relative'
+    <section className='bg-custom-gradient-bg flex lg:justify-start 2xl:justify-around relative'
       style={{ minHeight: `calc(100vh - 170px)` }}>
       
       <div className='flex flex-col w-1/3 space-y-12 pt-[7rem] md:pt-[10rem] xl:pt-[12rem] 
@@ -32,11 +32,16 @@ const Hero = () => {
         </p>
 
         <button
-          className='filled-btn p-5 w-72'
+          className='btn-filled group relative overflow-hidden transition p-5 w-72 hover:bg-azure'
           onClick={handleClick}
         >
-          Book online
+          <span className='relative'>Book online</span>
+          <div className="animate-shine-infinite absolute inset-0 -top-[20px] flex h-[calc(100%+40px)] w-full 
+            justify-center blur-[16px]">
+            <div className="relative h-full w-8 bg-white/40"></div>
+          </div>
         </button>
+    
       </div>
 
       <div className='hidden 2xl:block'>

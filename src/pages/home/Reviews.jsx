@@ -39,7 +39,7 @@ const Reviews = () => {
       </div>
 
       
-      <p className='font-cursive text-azure text-[5.6rem] ml-[38rem] mt-12 transform -rotate-12' >
+      <p className='font-cursive text-azure text-[5.6rem] ml-[38rem] mt-4 transform -rotate-12' >
           Thank You!
         </p>
     </section>

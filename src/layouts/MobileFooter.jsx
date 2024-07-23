@@ -27,8 +27,6 @@ const MobileFooter = () => {
             <div className='w-full h-24 bg-midnight flex justify-center items-center'>
                 <p className="text-md md:text-lg font-medium text-white3 text-center mx-auto">
                     © 2024 Design & Development by Trish Ramos.
-                    <br/>
-                    All rights reserved.
                 </p>
             </div>
 

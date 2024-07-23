@@ -9,7 +9,7 @@ const Carousel = ({ services, onClick, autoSlide, autoSlideInterval }) => {
         const width = window.innerWidth;
         if (width < 640) return 1;
         if (width <= 1280) return 2;
-        return 3;
+        return 4;
     };
 
     const [visibleCards, setVisibleCards] = useState(getVisibleCards());
@@ -63,7 +63,7 @@ const Carousel = ({ services, onClick, autoSlide, autoSlideInterval }) => {
             const serviceIndex = (activeIndex + i) % services.length;
             const service = services[serviceIndex];
             cards.push(
-                <ServiceCard key={serviceIndex} {...service} onClick={() => onClick(service)} />
+                <ServiceCard key={serviceIndex} index={serviceIndex} {...service} onClick={() => onClick(service)} />
             );
         }
         return cards;

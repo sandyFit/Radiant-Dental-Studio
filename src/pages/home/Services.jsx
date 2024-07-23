@@ -26,9 +26,10 @@ const Services = () => {
 
 
   return (
-    <div className='bg-white flex flex-col justify-center items-center min-h-screen space-y-12 relative pt-0 xl:pt-20 pb-24'>
+    <div className='bg-custom-gradient-bg flex flex-col justify-center items-center min-h-screen space-y-12 
+        relative pt-0 xl:pt-20 pb-24'>
       <div className='flex flex-col justify-center items-center space-y-8'>
-        <h2 className='text-center text-spaceCadet text-3xl md:text-5xl font-bold w-2/3 
+        <h2 className='text-center text-white3 text-3xl md:text-5xl font-bold w-2/3 
           lg:w-2/4 xl:w-2/4 2xl:w-3/5 pt-20 lg:pt-4'>
           Discover Our Exceptional  
           <span className='text-azure' style={{ margin: ' 0 1rem' }}>
@@ -36,7 +37,7 @@ const Services = () => {
           </span>         
         </h2>
 
-        <p className='text-lightBlue text-lg md:text-xl xl:text-2xl font-semibold w-3/4 md:w-2/4 2xl:w-3/5'>
+        <p className='text-oceanBlue text-lg md:text-xl xl:text-2xl font-semibold w-3/4 md:w-2/4 2xl:w-3/5'>
           We provide a wide range of treatments, including cosmetic dentistry. Our commitment is rooted in
           assisting patients in preserving lifelong healthy teeth. Trust us for diverse services aimed at
           enhancing both the aesthetics and longevity of your smile.

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=WindSong&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Hind+Siliguri:wght@300;400;500&family=WindSong&display=swap');
 
 
 @tailwind base;
@@ -15,6 +15,7 @@
         @apply font-sans;
     }
 
+
     a {
         @apply cursor-pointer no-underline;
     }
@@ -22,19 +23,44 @@
 
 @layer components {
     .button {
-        @apply text-center font-semibold tracking-wider focus:outline-none border-2 rounded-lg text-xl uppercase;
+        @apply text-center font-bold tracking-widest focus:outline-none border-2 rounded-lg text-xl uppercase;
+    }
+
+    .gradient-border {
+        position: relative;
+    }
+    .gradient-border::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit; /* Match the border-radius of the element */
+        background: linear-gradient(135deg, rgba(6,147,227,1) 0%, rgb(155,81,224) 100%);
+        border-radius: inherit; /* Match the border-radius of the element */
+        clip-path: polygon(0% 0%, 0% 100%, 4px 100%, 4px 4px, calc(100% - 4px) 4px, calc(100% - 4px) 
+                    calc(100% - 4px), 4px calc(100% - 4px), 4px 100%, 100% 100%, 100% 0%); 
+        pointer-events: none; /* Allows clicks to pass through */   
     }
 }
 
-@layer utilities {
-    .filled-btn {
-        @apply button text-white3 bg-azure hover:text-spanishBlue hover:bg-transparent border-4
-            border-transparent hover:border-4 hover:border-spanishBlue shadow-xl shadow-midnight
+@layer utilities {   
+
+
+    .btn-filled {
+        @apply button text-white bg-custom-gradient-btn hover:bg-transparent  border-spanishBlue 
+             shadow-xl shadow-midnight
+    }
+    .btn-filled-no-shadow {
+        @apply text-white bg-custom-gradient-btn hover:bg-transparent  border-spanishBlue 
+             
     }
 
     .no-shadow-btn {
-        @apply button text-white3 bg-spanishBlue hover:text-spanishBlue hover:bg-transparent 
+        @apply button text-white bg-spanishBlue hover:text-spanishBlue hover:bg-transparent 
             border-4 border-transparent hover:border-4 hover:border-spanishBlue 
+    }
+
+    .border-btn {
+        @apply button text-oceanBlue bg-transparent border-4 border-oceanBlue hover:tracking-widest 
     }
 
     .transparent-btn {
@@ -47,6 +73,7 @@
             text-azure text-left
     }
 
+    
     
 
     .ul {
